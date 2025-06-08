@@ -17,10 +17,4 @@
     // Если ошибка — остаёмся на англоязычном сайте
     console.error("Geo detection failed", e);
   }
-
-  const lang = navigator.language || navigator.userLanguage;
-if (lang.startsWith("ru")) {
-  window.location.href = "https://ultrarealist.netlify.app";
-}
-
 })();

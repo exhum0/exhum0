@@ -1,7 +1,7 @@
 "use strict";
 
 (function _callee() {
-  var res, data, country, russianCountries, lang;
+  var res, data, country, russianCountries;
   return regeneratorRuntime.async(function _callee$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
@@ -37,13 +37,6 @@
           console.error("Geo detection failed", _context.t0);
 
         case 15:
-          lang = navigator.language || navigator.userLanguage;
-
-          if (lang.startsWith("ru")) {
-            window.location.href = "https://ultrarealist.netlify.app";
-          }
-
-        case 17:
         case "end":
           return _context.stop();
       }
