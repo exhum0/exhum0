@@ -4,38 +4,23 @@
     const data = await res.json();
     const country = data.country.toLowerCase();
 
-    const allowedCountries = [
-      "us",
-      "ca",
-      "gb",
-      "au",
-      "nz",
-      "fr",
-      "de",
-      "it",
-      "es",
-      "pt",
-      "nl",
-      "be",
-      "ch",
-      "at",
-      "se",
-      "no",
-      "fi",
-      "dk",
-      "ie",
-      "lu",
-    ];
+    // Список "русскоязычных" стран
+    const russianCountries = ["ru", "by", "kz", "kg", "ua", "uz", "tj", "am", "az"];
 
-    if (blockedCountries.includes(country)) {
-      window.location.href = "404.html";
+    if (russianCountries.includes(country)) {
+      // Редиректим на русский сайт
+      window.location.href = "https://ultrarealist.netlify.app";
     }
 
-    if (!allowedCountries.includes(country)) {
-      window.location.href = "404.html";
-    }
+    // Иначе — остаётся на английском сайте (ничего не делаем)
   } catch (e) {
-    window.location.href = "404.html";
+    // Если ошибка — остаёмся на англоязычном сайте
+    console.error("Geo detection failed", e);
   }
-})();
 
+  const lang = navigator.language || navigator.userLanguage;
+if (lang.startsWith("ru")) {
+  window.location.href = "https://ultrarealist.netlify.app";
+}
+
+})();
