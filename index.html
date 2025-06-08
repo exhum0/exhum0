@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Redirecting...</title>
-  <script>
-    (async function () {
-      const supportedLangs = ['en', 'ru', 'es'];
-      const savedLang = localStorage.getItem('lang');
-      const browserLang = navigator.language?.split('-')[0] || 'en';
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      (async function () {
+        try {
+          const res = await fetch("https://api.country.is/");
+          const data = await res.json();
+          const country = data.country.toLowerCase();
 
-      let geoLang = 'en';
-      try {
-        const res = await fetch('https://ipapi.co/json/');
-        const data = await res.json();
-        const country = data.country_code.toLowerCase();
-        if (country === 'ru') geoLang = 'ru';
-        else if (country === 'es') geoLang = 'es';
-      } catch (e) {
-        // fallback = en
-      }
+          // Список "русскоязычных" стран
+          const russianCountries = [
+            "ru",
+            "by",
+            "kz",
+            "kg",
+            "ua",
+            "uz",
+            "tj",
+            "am",
+            "az",
+          ];
 
-      const lang =
-        supportedLangs.includes(savedLang) ? savedLang :
-        supportedLangs.includes(browserLang) ? browserLang :
-        geoLang;
+          if (russianCountries.includes(country)) {
+            // Редиректим на русский сайт
+            window.location.href = "https://ultrarealist.netlify.app";
+          }
 
-      window.location.replace(`/${lang}/`);
-    })();
-  </script>
-</head>
-<body>
-  <p>Redirecting...</p>
-</body>
+          // Иначе — остаётся на английском сайте (ничего не делаем)
+        } catch (e) {
+          // Если ошибка — остаёмся на англоязычном сайте
+          console.error("Geo detection failed", e);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
 </html>
