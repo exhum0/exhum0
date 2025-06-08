@@ -10,8 +10,11 @@
 }
 
 .err_row {
-  font-size: 24px;
+  font-size: 34px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
   gap: 10px;
 }
