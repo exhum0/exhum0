@@ -1,10 +1,13 @@
 .err_info {
   margin: 20px;
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 34px;
   gap: 10px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
 
 .err_row {
