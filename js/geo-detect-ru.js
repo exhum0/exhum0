@@ -7,9 +7,9 @@
     const allowedCountries = ["ru"];
 
     if (!allowedCountries.includes(country)) {
-      window.location.href = "../404.html";
+      window.location.href = "404.html";
     }
   } catch (e) {
-    window.location.href = "../404.html";
+    window.location.href = "404.html";
   }
 })();
