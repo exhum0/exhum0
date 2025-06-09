@@ -21,11 +21,11 @@
           allowedCountries = ["us", "ca", "gb", "au", "nz", "fr", "de", "it", "es", "pt", "nl", "be", "ch", "at", "se", "no", "fi", "dk", "ie", "lu"];
 
           if (blockedCountries.includes(country)) {
-            window.location.href = "404.html";
+            window.location.href = "/404.html";
           }
 
           if (!allowedCountries.includes(country)) {
-            window.location.href = "404.html";
+            window.location.href = "/404.html";
           }
 
           _context.next = 16;
@@ -34,7 +34,7 @@
         case 13:
           _context.prev = 13;
           _context.t0 = _context["catch"](0);
-          window.location.href = "404.html";
+          window.location.href = "/404.html";
 
         case 16:
         case "end":
