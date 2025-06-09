@@ -288,6 +288,17 @@ html, body {
   color: #333;
   font-size: 20px;
 }
+
+.legal-links,
+.legal-links a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  text-decoration: none;
+  color: black;
+}
+
 /* Bio */
 
 .bio_info {
