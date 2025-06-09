@@ -21,7 +21,7 @@
           allowedCountries = ["ru"];
 
           if (!allowedCountries.includes(country)) {
-            window.location.href = "404.html";
+            window.location.href = "../404.html";
           }
 
           _context.next = 15;
@@ -30,7 +30,7 @@
         case 12:
           _context.prev = 12;
           _context.t0 = _context["catch"](0);
-          window.location.href = "404.html";
+          window.location.href = "../404.html";
 
         case 15:
         case "end":
