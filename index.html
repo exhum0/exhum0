@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Redirecting...</title>
-    <script>
-      (async function () {
-        const supportedLangs = ["en", "ru", "es"];
-        const savedLang = localStorage.getItem("lang");
-        const browserLang = navigator.language?.split("-")[0] || "en";
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    (async function () {
+      const supportedLangs = ['en', 'ru', 'es'];
+      const savedLang = localStorage.getItem('lang');
+      const browserLang = navigator.language?.split('-')[0] || 'en';
 
-        let geoLang = "en";
-        try {
-          const res = await fetch("https://ipapi.co/json/");
-          const data = await res.json();
-          const country = data.country_code.toLowerCase();
-          if (country === "ru") geoLang = "ru";
-          else if (country === "es") geoLang = "es";
-        } catch (e) {
-          // fallback = en
-        }
+      let geoLang = 'en';
+      try {
+        const res = await fetch('https://ipapi.co/json/');
+        const data = await res.json();
+        const country = data.country_code.toLowerCase();
+        if (country === 'ru') geoLang = 'ru';
+        else if (country === 'es') geoLang = 'es';
+      } catch (e) {
+        // fallback = en
+      }
 
-        const lang = supportedLangs.includes(savedLang)
-          ? savedLang
-          : supportedLangs.includes(browserLang)
-          ? browserLang
-          : geoLang;
+      const lang =
+        supportedLangs.includes(savedLang) ? savedLang :
+        supportedLangs.includes(browserLang) ? browserLang :
+        geoLang;
 
-        window.location.replace(`/${lang}/`);
-      })();
-    </script>
-  </head>
-  <body>
-    <p>Redirecting...</p>
-  </body>
+      window.location.replace(`/${lang}/`);
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
 </html>
