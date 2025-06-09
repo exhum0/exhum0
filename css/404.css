@@ -39,7 +39,7 @@ h1 {
 
 .label {
   font-weight: bold;
-  width: 140px; /* можно подогнать */
+  width: 140px;
 }
 
 .value {
