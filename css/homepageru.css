@@ -4,7 +4,7 @@ html, body {
   box-sizing: border-box;
   scroll-behavior: smooth;
 
-  background-image: url(../img/backgroundru.jpg);
+  background-image: url(../assets/img/backgroundru.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(90%)
