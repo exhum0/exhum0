@@ -377,3 +377,35 @@ input, textarea {
   margin-right: 10px;
   padding: 5px 10px;
 }
+
+/* Lang Switcher */
+
+.language-switch {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lang-btn:hover {
+  background: red;
+  color: black;
+}
+
+.lang-select {
+  border: 1px solid red;
+  color: red;
+  background: black;
+  margin-bottom: 20px;
+  padding: 5px;
+}
