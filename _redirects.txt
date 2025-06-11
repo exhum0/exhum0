@@ -1,6 +1,0 @@
-/    /index.html    302
-
-/ru/*     /ru/404.html    404
-/en/*     /en/404.html    404
-/es/*     /es/404.html    404
-/*        /en/404.html    404
