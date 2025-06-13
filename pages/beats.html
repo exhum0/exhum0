@@ -14,7 +14,7 @@
     <title>Beats</title>
 
     <script defer src="../js/geo-detect-en.js"></script>
-    
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -42,73 +42,135 @@
 
       <!-- Контент -->
       <main class="content">
-        <div class="beat_store"></div>
-        <div class="container">
-          <div class="player">
-            <div class="track-info">
-              <div class="meta">
-                <h4 id="title">Track Title</h4>
-                <span id="duration">0:00</span>
-              </div>
-            </div>
-
-            <audio id="audio" preload="metadata"></audio>
-
-            <div class="controls">
-              <button class="ctrl-btn"><i class="fas fa-backward"></i></button>
-              <button class="ctrl-btn play-btn">
-                <i class="fas fa-play"></i>
-              </button>
-              <button class="ctrl-btn"><i class="fas fa-forward"></i></button>
-            </div>
-
-            <div class="progress-container">
-              <input type="range" id="progress" value="0" step="1" />
-            </div>
-
-            <ul class="tracklist">
-              <script>
-                fetch("../tracklist.json")
-                  .then((res) => res.json())
-                  .then((tracks) => {
-                    // Подставляешь src
-                    audio.src = tracks[0].file;
-                    audio.src = "../beats/Chains.mp3";
-                    audio.src = "../beats/Lazy Funk.mp3";
-                    audio.src = "../beats/Routine.mp3";
-                  });
-              </script>
-            </ul>
-
-            <div class="purchase-options">
-              <h4>Buy this track:</h4>
-              <button class="buy-btn" data-type="lease">Lease ($9.99)</button>
-              <button class="buy-btn" data-type="exclusive">
-                Exclusive ($99.99)
-              </button>
-              <button class="buy-btn" data-type="unlimited">
-                Unlimited ($29.99)
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="subscribe-section">
+        <section class="beats">
           <div class="container">
-            <h3>SUBSCRIBE</h3>
-            <p>
-              Receive email updates about launches, new product info, exclusive
-              access, and more.
-            </p>
-            <form class="subscribe-form">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                required
-              />
-              <button type="submit">Subscribe Now</button>
-            </form>
+            <h2>Beats</h2>
+            <table class="beats-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Date</th>
+                  <th>Plays</th>
+                  <th><i class="icon-clock"></i></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td class="track-info">
+                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
+                    <div class="title">
+                      <button class="play-btn">▶</button>
+                      <span>mIPPO</span>
+                    </div>
+                  </td>
+                  <td>04.03.21</td>
+                  <td>2,154</td>
+                  <td>2:41</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="track-info">
+                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
+                    <div class="title">
+                      <button class="play-btn">▶</button>
+                      <span>mIPPO</span>
+                    </div>
+                  </td>
+                  <td>04.03.21</td>
+                  <td>2,154</td>
+                  <td>2:41</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="track-info">
+                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
+                    <div class="title">
+                      <button class="play-btn">▶</button>
+                      <span>mIPPO</span>
+                    </div>
+                  </td>
+                  <td>04.03.21</td>
+                  <td>2,154</td>
+                  <td>2:41</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="track-info">
+                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
+                    <div class="title">
+                      <button class="play-btn">▶</button>
+                      <span>mIPPO</span>
+                    </div>
+                  </td>
+                  <td>04.03.21</td>
+                  <td>2,154</td>
+                  <td>2:41</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="track-info">
+                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
+                    <div class="title">
+                      <button class="play-btn">▶</button>
+                      <span>mIPPO</span>
+                    </div>
+                  </td>
+                  <td>04.03.21</td>
+                  <td>2,154</td>
+                  <td>2:41</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="track-info">
+                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
+                    <div class="title">
+                      <button class="play-btn">▶</button>
+                      <span>mIPPO</span>
+                    </div>
+                  </td>
+                  <td>04.03.21</td>
+                  <td>2,154</td>
+                  <td>2:41</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="track-info">
+                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
+                    <div class="title">
+                      <button class="play-btn">▶</button>
+                      <span>mIPPO</span>
+                    </div>
+                  </td>
+                  <td>04.03.21</td>
+                  <td>2,154</td>
+                  <td>2:41</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="track-info">
+                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
+                    <div class="title">
+                      <button class="play-btn">▶</button>
+                      <span>mIPPO</span>
+                    </div>
+                  </td>
+                  <td>04.03.21</td>
+                  <td>2,154</td>
+                  <td>2:41</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="pagination">
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <!-- и т.д. -->
+            </div>
           </div>
-        </div>
+        </section>
       </main>
 
       <footer class="footer">

@@ -334,78 +334,58 @@ input, textarea {
 
 /* Beats */
 
-.player {
+.beats {
+  color: rgb(0, 0, 0);
+  padding: 60px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.beats-table {
   width: 100%;
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-  font-family: sans-serif;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.beats-table th,
+.beats-table td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .track-info {
   display: flex;
-  gap: 15px;
   align-items: center;
-}
-
-.cover {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-}
-
-.controls button {
-  margin: 10px;
-}
-
-.tracklist {
-  list-style: none;
-  padding: 0;
-}
-
-.tracklist li {
-  cursor: pointer;
-  padding: 5px 0;
-}
-
-.purchase-options {
-  margin-top: 20px;
-}
-
-.buy-btn {
-  margin-right: 10px;
-  padding: 5px 10px;
-}
-
-/* Lang Switcher */
-
-.language-switch {
-  display: flex;
-  flex-direction: column;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
-.lang-btn {
+.track-info img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.play-btn {
   background: none;
-  border: 1px solid white;
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.lang-btn:hover {
-  background: red;
-  color: black;
+.pagination {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
 
-.lang-select {
-  border: 1px solid red;
-  color: red;
-  background: black;
-  margin-bottom: 20px;
-  padding: 5px;
+.pagination button {
+  background: transparent;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
 }
