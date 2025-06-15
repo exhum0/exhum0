@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://exhum0.netlify.app/sitemap.xml
