@@ -35,4 +35,4 @@ I am Adam Lean, I software developer and musician
 
 1. [Factory Revolt](https://rave.bz/gJSS0X)
 
-- Radical left, anti-war trash metal/hardcore project. For a long time, due to censorship, it was not possible to publish music on streaming platforms.
+- Radical left, anti-war thrash metal/hardcore project. For a long time, due to censorship, it was not possible to publish music on streaming platforms.
