@@ -103,7 +103,7 @@ function showLicensePopup(title) {
   const html = `
     <div class="popup-overlay" id="popup">
       <div class="popup">
-        <h3>Выберите лицензию для "${title}"</h3>
+        <h3>Select licence "${title}"</h3>
         <button onclick="selectLicense('lease')">Leasing – $29.99</button>
         <button onclick="selectLicense('exclusive')">Exclusive – $199.99</button>
         <button onclick="closePopup()">Cancel</button>
