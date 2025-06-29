@@ -28,17 +28,3 @@ Me llamo Dmitry Lean, soy desarrollador y músico.
 
 - [Script2Call](https://script2call.netlify.app) (Gestor de scripts para centros de llamadas) - **En progreso**
 - [Plastic Cult](https://github.com/adamlean/plasticcult) (Bot para publicación automática en el canal de Telegram) - **En progreso**
-
-## Música
-
-1. [Factory Revolt](https://rave.bz/gJSS0X)
-
-- Proyecto de thrash metal/hardcore de izquierda radical y antibélico. Durante mucho tiempo, debido a la censura, no fue posible publicar música en plataformas de streaming. El proyecto no está activo.
-
-2. **exhum0**
-
-- Proyecto boom bap inspirado en el hip-hop de los 90, el R&B urbano de los 2000, el soul y el funk, así como el jazz étnico. El proyecto no está activo actualmente.
-
-3. **Otros Proyectos**
-
-- Por lo tanto, no considero necesario escribir sobre ellos.
