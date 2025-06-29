@@ -47,4 +47,4 @@ Me llamo Dmitry Lean, soy desarrollador y músico.
 
 3. **Otros Proyectos**
 
-- Winterlord, Vinterious, Fext, Darkflame y otros proyectos que considero experimentos fallidos. Por lo tanto, no considero necesario escribir sobre ellos.
+- Por lo tanto, no considero necesario escribir sobre ellos.

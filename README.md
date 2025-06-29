@@ -45,4 +45,4 @@ I am Adam Lean, I software developer and musician.
 
 3. **Other Projects**
 
-- Winterlord, Vinterious, Fext, Darkflame and other projects I consider to be unsuccessful experiments. Therefore, I do not consider it necessary to write anything about them.
+- Therefore, I do not consider it necessary to write anything about them.
