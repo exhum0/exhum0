@@ -823,3 +823,123 @@ input, textarea {
 .live-link:hover {
   opacity: 0.8;
 }
+
+/* Pop-Up */
+
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-license {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.license-option {
+  display: flex;
+  justify-content: space-between;
+  background: #1a1a1a;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.license-info h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.license-info p {
+  margin: 0 0 10px;
+  color: black;
+  font-size: 14px;
+}
+
+.toggle-terms {
+  background: none;
+  color: #bbb;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0;
+}
+
+.buy-btn, .make-offer-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.or-divider {
+  text-align: center;
+  margin: 20px 0 10px;
+  font-size: 14px;
+  color: #888;
+}
+
+.negotiate-btn {
+  background: #ef4444;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close-btn {
+  margin-top: 15px;
+  background: none;
+  color: #999;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.usage-terms {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.5;
+  display: none;
+}
+
+.usage-terms.active {
+  display: block;
+}
+
+.toggle-terms {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.toggle-terms.active {
+  color: #fff;
+}

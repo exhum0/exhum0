@@ -15,6 +15,17 @@
 
     <!-- <script defer src="../js/geo-detect-en.js"></script> -->
 
+    <script>
+      function openLicensePopup() {
+        document.getElementById("license-popup").style.display = "flex";
+      }
+
+      function closeLicensePopup() {
+        const popup = document.getElementById("license-popup");
+        if (popup) popup.remove(); // или: popup.style.display = "none";
+      }
+    </script>
+
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
@@ -39,6 +50,81 @@
           </nav>
         </div>
       </header>
+
+      <div class="popup-overlay" id="license-popup">
+        <div class="popup-license">
+          <div class="license-option">
+            <div class="license-info">
+              <h3>TRACKOUT LEASE</h3>
+              <p>WAV, STEMS & MP3</p>
+              <button class="toggle-terms">▼ Show usage terms</button>
+              <div class="usage-terms hidden">
+                <p>- Use in commercial releases</p>
+                <p>- Up to 500,000 streams</p>
+                <p>- Must credit producer</p>
+              </div>
+            </div>
+            <div class="license-price">
+              <button class="buy-btn">$79.99</button>
+            </div>
+          </div>
+
+          <div class="license-option">
+            <div class="license-info">
+              <h3>UNLIMITED (NO STEMS)</h3>
+              <p>WAV & MP3</p>
+              <button class="toggle-terms">▼ Show usage terms</button>
+              <div class="usage-terms hidden">
+                <p>- Use in commercial releases</p>
+                <p>- Up to 500,000 streams</p>
+                <p>- Must credit producer</p>
+              </div>
+            </div>
+            <div class="license-price">
+              <button class="buy-btn">$99.99</button>
+            </div>
+          </div>
+
+          <div class="license-option">
+            <div class="license-info">
+              <h3>UNLIMITED LEASE</h3>
+              <p>WAV, STEMS & MP3</p>
+              <button class="toggle-terms">▼ Show usage terms</button>
+              <div class="usage-terms hidden">
+                <p>- Use in commercial releases</p>
+                <p>- Up to 500,000 streams</p>
+                <p>- Must credit producer</p>
+              </div>
+            </div>
+            <div class="license-price">
+              <button class="buy-btn">$129.99</button>
+            </div>
+          </div>
+
+          <div class="license-option">
+            <div class="license-info">
+              <h3>EXCLUSIVE</h3>
+              <p>NEGOTIATE</p>
+              <button class="toggle-terms">▼ Show usage terms</button>
+              <div class="usage-terms hidden">
+                <p>- Use in commercial releases</p>
+                <p>- Up to 500,000 streams</p>
+                <p>- Must credit producer</p>
+              </div>
+            </div>
+            <div class="license-price">
+              <button class="make-offer-btn">MAKE AN OFFER</button>
+            </div>
+          </div>
+
+          <div class="or-divider">Or, you can also:</div>
+
+          <button class="negotiate-btn">Negotiate the price</button>
+          <button onclick="closeLicensePopup()" class="close-btn">
+            Cancel
+          </button>
+        </div>
+      </div>
 
       <main class="content">
         <div class="track-list">
@@ -110,7 +196,7 @@
       </footer>
     </div>
 
-    <script src="scripts/main.js"></script>
+    <script src="../js/scripts.js"></script>
     <script src="../js/pplayer.js"></script>
   </body>
 </html>
