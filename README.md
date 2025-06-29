@@ -30,3 +30,9 @@ I am Adam Lean, I software developer and musician
 
 - [Script2Call](https://script2call.netlify.app) (Script manager for call centers) - **Work in progress**
 - [Plastic Cult](https://github.com/adamlean/plasticcult) (Bot for automatic publication in telegram channel) - **Work in progress**
+
+## Music
+
+1. [Factory Revolt](https://rave.bz/gJSS0X)
+
+- Radical left, anti-war trash metal/hardcore project. For a long time, due to censorship, it was not possible to publish music on streaming platforms.
