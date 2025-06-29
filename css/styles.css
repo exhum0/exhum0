@@ -81,6 +81,67 @@ html, body {
   font-size: 24px;
 }
 
+/* About */
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 60px;
+}
+
+.about__image img {
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.about__text {
+  max-width: 600px;
+}
+
+.about__text h4 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #ccc;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.about__text h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.about__text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #aaa;
+  margin-bottom: 32px;
+}
+
+.contact-btn {
+  background-color: #e4e4e4;
+  color: black;
+  border: none;
+  padding: 14px 28px;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #c5c5c5;
+}
+
 /* Music */
 
 .albums-section {
