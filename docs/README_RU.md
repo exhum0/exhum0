@@ -22,13 +22,7 @@
 
 ## Crash The Routines
 
-**Crash The Routines** - это "цех" по созданию веб-сайтов, приложений, скриптов и ботов для мессенджеров.
-
-- EMail: crashtheroutine@gmail.com
-- [Instagram](https://www.instagram.com/crashtheroutines)
-- [Telegram](https://t.me/crashtheroutines)
-- [GitHub Orgranization](https://github.com/CrashTheRoutines)
-- [Website](https://crashtheroutines.netlify.app)
+[Crash The Routines](https://github.com/CrashTheRoutines) - это "цех" по созданию веб-сайтов, приложений, скриптов и ботов для мессенджеров.
 
 ## Проекты
 

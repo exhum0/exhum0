@@ -20,13 +20,7 @@ I am Adam Lean, I software developer and musician.
 
 ## Crash The Routines
 
-**Crash The Routines** is a "workshop" for the mass production of websites, applications, scripts and bots for messengers.
-
-- EMail: crashtheroutine@gmail.com
-- [Instagram](https://www.instagram.com/crashtheroutines)
-- [Telegram](https://t.me/crashtheroutines)
-- [GitHub Orgranization](https://github.com/CrashTheRoutines)
-- [Website](https://crashtheroutines.netlify.app)
+[Crash The Routines](https://github.com/CrashTheRoutines) is a "workshop" for the mass production of websites, applications, scripts and bots for messengers.
 
 ## Projects
 

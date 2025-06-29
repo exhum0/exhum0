@@ -22,13 +22,7 @@ Me llamo Dmitry Lean, soy desarrollador y músico.
 
 ## Crash The Routines
 
-**Crash The Routines** es un taller para crear sitios web, aplicaciones, scripts y bots para mensajería.
-
-- Correo electrónico: crashtheroutine@gmail.com
-- [Instagram](https://www.instagram.com/crashtheroutines)
-- [Telegram](https://t.me/crashtheroutines)
-- [Organización de GitHub](https://github.com/CrashTheRoutines)
-- [Sitio web](https://crashtheroutines.netlify.app)
+[Crash The Routines](https://github.com/CrashTheRoutines) es un taller para crear sitios web, aplicaciones, scripts y bots para mensajería.
 
 ## Proyectos
 
