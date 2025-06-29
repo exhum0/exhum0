@@ -161,7 +161,6 @@ html, body {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   justify-items: center;
   gap: 30px;
-  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -174,8 +173,8 @@ html, body {
 }
 
 .skill img {
-  width: 48px;
-  height: 48px;
+  width: 30px;
+  height: 30px;
   margin-bottom: 8px;
 }
 
