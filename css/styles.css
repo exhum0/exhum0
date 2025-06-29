@@ -154,7 +154,7 @@ html, body {
 .skills-title {
   display: inline-block;
   padding: 10px 30px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 1.8rem;
   font-weight: bold;
   letter-spacing: 2px;
@@ -162,7 +162,7 @@ html, body {
 }
 
 .skills-category {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .skills-category h3 {
