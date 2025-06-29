@@ -27,11 +27,11 @@ html, body {
 
 .nav_title {
   display: flex;
-  color: black;
+  color: white;
 }
 
 .nav_menu a {
-  color: black;
+  color: white;
   font-style: normal;
   text-decoration: none; 
 }
@@ -68,7 +68,7 @@ html, body {
 }
 
 .icons a {
-  color: black;
+  color: white;
   font-size: 48px;
   transition: 0.3s;
 }
