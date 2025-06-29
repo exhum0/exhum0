@@ -513,58 +513,101 @@ input, textarea {
 
 /* Beats */
 
-.beats {
-  color: rgb(0, 0, 0);
-  padding: 60px 20px;
-  font-family: 'Montserrat', sans-serif;
+.track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 30px;
 }
 
-.beats-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.beats-table th,
-.beats-table td {
-  text-align: left;
-  padding: 12px 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 10px;
+  transition: background 0.2s;
 }
 
 .track-info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+  flex: 2;
 }
 
-.track-info img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
+.cover {
+  width: 45px;
+  height: 45px;
   border-radius: 6px;
+  object-fit: cover;
 }
 
-.play-btn {
-  background: none;
-  border: none;
-  color: rgb(0, 0, 0);
-  font-size: 18px;
-  cursor: pointer;
+.title-artist .title {
+  font-weight: bold;
+  font-size: 15px;
 }
 
-.pagination {
-  margin: 10px 0;
+.genre {
+  color: #ff4b4b;
+  font-weight: normal;
+}
+
+.duration {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+.tags {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
+  flex: 1;
+  justify-content: center;
 }
 
-.pagination button {
-  background: transparent;
-  border: 1px solid rgb(0, 0, 0);
-  color: rgb(0, 0, 0);
-  padding: 6px 10px;
-  border-radius: 50%;
+.tag {
+  background: #ff0000;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.track-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.icon-btn {
+  background: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
   cursor: pointer;
+  color: #000;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.icon-btn:hover {
+  background: #eee;
+}
+
+.price-btn {
+  background: #ff3b30;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.price-btn:hover {
+  background: #e22a1f;
 }

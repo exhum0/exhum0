@@ -16,8 +16,8 @@
     <!-- <script defer src="../js/geo-detect-en.js"></script> -->
 
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
@@ -41,134 +41,101 @@
       </header>
 
       <main class="content">
-        <section class="beats">
+        <div class="track-list">
           <div class="container">
-            <h2>Beats</h2>
-            <table class="beats-table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Title</th>
-                  <th>Date</th>
-                  <th>Plays</th>
-                  <th><i class="icon-clock"></i></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td class="track-info">
-                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
-                    <div class="title">
-                      <button class="play-btn">▶</button>
-                      <span>mIPPO</span>
-                    </div>
-                  </td>
-                  <td>04.03.21</td>
-                  <td>2,154</td>
-                  <td>2:41</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td class="track-info">
-                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
-                    <div class="title">
-                      <button class="play-btn">▶</button>
-                      <span>mIPPO</span>
-                    </div>
-                  </td>
-                  <td>04.03.21</td>
-                  <td>2,154</td>
-                  <td>2:41</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td class="track-info">
-                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
-                    <div class="title">
-                      <button class="play-btn">▶</button>
-                      <span>mIPPO</span>
-                    </div>
-                  </td>
-                  <td>04.03.21</td>
-                  <td>2,154</td>
-                  <td>2:41</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td class="track-info">
-                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
-                    <div class="title">
-                      <button class="play-btn">▶</button>
-                      <span>mIPPO</span>
-                    </div>
-                  </td>
-                  <td>04.03.21</td>
-                  <td>2,154</td>
-                  <td>2:41</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td class="track-info">
-                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
-                    <div class="title">
-                      <button class="play-btn">▶</button>
-                      <span>mIPPO</span>
-                    </div>
-                  </td>
-                  <td>04.03.21</td>
-                  <td>2,154</td>
-                  <td>2:41</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td class="track-info">
-                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
-                    <div class="title">
-                      <button class="play-btn">▶</button>
-                      <span>mIPPO</span>
-                    </div>
-                  </td>
-                  <td>04.03.21</td>
-                  <td>2,154</td>
-                  <td>2:41</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td class="track-info">
-                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
-                    <div class="title">
-                      <button class="play-btn">▶</button>
-                      <span>mIPPO</span>
-                    </div>
-                  </td>
-                  <td>04.03.21</td>
-                  <td>2,154</td>
-                  <td>2:41</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td class="track-info">
-                    <img src="../assets/img/coverart_1.jpeg" alt="cover" />
-                    <div class="title">
-                      <button class="play-btn">▶</button>
-                      <span>mIPPO</span>
-                    </div>
-                  </td>
-                  <td>04.03.21</td>
-                  <td>2,154</td>
-                  <td>2:41</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="track" data-src="../assets/beats/Chains.mp3">
+              <div class="track-info">
+                <img class="cover" src="cover.jpg" alt="Track cover" />
+                <div class="title-artist">
+                  <div class="title">
+                    Chaince <span class="genre">| Hard Boom Bap</span>
+                  </div>
+                  <div class="duration">03:36</div>
+                </div>
+              </div>
 
-            <div class="pagination">
-              <button>1</button>
-              <button>2</button>
-              <button>3</button>
+              <div class="tags">
+                <span class="tag">boom bap</span>
+                <span class="tag">old school</span>
+              </div>
+
+              <div class="track-actions">
+                <button class="icon-btn play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <button class="icon-btn">
+                  <i class="fas fa-download"></i>
+                </button>
+                <button class="icon-btn">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+                <button class="price-btn">$29.99</button>
+              </div>
+            </div>
+
+            <div class="track" data-src="../assets/beats/Lazy Funk.mp3">
+              <div class="track-info">
+                <img class="cover" src="cover.jpg" alt="Track cover" />
+                <div class="title-artist">
+                  <div class="title">
+                    Lazy Funk <span class="genre">| Hard Boom Bap</span>
+                  </div>
+                  <div class="duration">03:36</div>
+                </div>
+              </div>
+
+              <div class="tags">
+                <span class="tag">boom bap</span>
+                <span class="tag">old school</span>
+              </div>
+
+              <div class="track-actions">
+                <button class="icon-btn play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <button class="icon-btn">
+                  <i class="fas fa-download"></i>
+                </button>
+                <button class="icon-btn">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+                <button class="price-btn">$29.99</button>
+              </div>
+            </div>
+
+            <div class="track" data-src="../assets/beats/Routine.mp3">
+              <div class="track-info">
+                <img class="cover" src="cover.jpg" alt="Track cover" />
+                <div class="title-artist">
+                  <div class="title">
+                    Routine <span class="genre">| Hard Boom Bap</span>
+                  </div>
+                  <div class="duration">03:36</div>
+                </div>
+              </div>
+
+              <div class="tags">
+                <span class="tag">boom bap</span>
+                <span class="tag">old school</span>
+              </div>
+
+              <div class="track-actions">
+                <button class="icon-btn play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
+                <button class="icon-btn">
+                  <i class="fas fa-download"></i>
+                </button>
+                <button class="icon-btn">
+                  <i class="fas fa-share-alt"></i>
+                </button>
+                <button class="price-btn">$29.99</button>
+              </div>
             </div>
           </div>
-        </section>
+
+          <audio id="audio-player"></audio>
+        </div>
       </main>
 
       <footer class="footer">
@@ -200,6 +167,6 @@
     </div>
 
     <script src="scripts/main.js"></script>
-    <script src="../js/audioplayer.js"></script>
+    <script src="../js/pplayer.js"></script>
   </body>
 </html>
