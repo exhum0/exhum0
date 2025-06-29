@@ -18,7 +18,7 @@ body::before {
   background-image: url('../assets/img/background.jpg');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.5);
+  filter: brightness(0.3);
   z-index: -2;
 }
 
