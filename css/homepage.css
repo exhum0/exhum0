@@ -84,7 +84,7 @@ body::after {
 .icons {
   display: flex;
   justify-content: right;
-  gap: 32px;
+  gap: 25px;
 
   margin-top: 30px;
 
