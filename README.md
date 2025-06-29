@@ -1,5 +1,3 @@
-[Русский](./docs/README_RU.md) [Spanish](./docs/README_ES.md)
-
 # About Me
 
 I am Adam Lean, I software developer and musician.
@@ -26,3 +24,7 @@ I am Adam Lean, I software developer and musician.
 
 - [Script2Call](https://script2call.netlify.app) (Script manager for call centers) - **Work in progress**
 - [Plastic Cult](https://github.com/adamlean/plasticcult) (Bot for automatic publication in telegram channel) - **Work in progress**
+
+## PS:
+
+I do not work with government, military or religious organizations.
