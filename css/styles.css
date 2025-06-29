@@ -611,3 +611,38 @@ input, textarea {
 .price-btn:hover {
   background: #e22a1f;
 }
+
+/* Popup */
+
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 250px;
+}
+.popup button, .popup a {
+  margin: 10px;
+  padding: 8px 16px;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  background: #eaeaea;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.popup button:hover, .popup a:hover {
+  background: #d0d0d0;
+}

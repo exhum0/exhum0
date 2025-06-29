@@ -67,7 +67,7 @@ downloadButtons.forEach((btn) => {
       link.click();
       document.body.removeChild(link);
     } else {
-      alert("Этот трек недоступен для бесплатного скачивания.");
+      alert("This is track not free");
     }
   });
 });
@@ -87,11 +87,10 @@ shareButtons.forEach((btn) => {
     const popupMenu = `
       <div class="popup-overlay" id="share-popup">
         <div class="popup">
-          <h3>Поделиться треком "${title}"</h3>
+          <h3>Share "${title}"</h3>
           <a href="https://t.me/share/url?url=${shareLink}&text=${shareText}" target="_blank">Telegram</a><br>
-          <a href="https://vk.com/share.php?url=${shareLink}" target="_blank">VK</a><br>
-          <a href="https://twitter.com/intent/tweet?text=${shareText}&url=${shareLink}" target="_blank">Twitter</a><br>
-          <button onclick="closeSharePopup()">Закрыть</button>
+          <a href="https://twitter.com/intent/tweet?text=${shareText}&url=${shareLink}" target="_blank">X</a><br>
+          <button onclick="closeSharePopup()">Close</button>
         </div>
       </div>
     `;
@@ -105,9 +104,9 @@ function showLicensePopup(title) {
     <div class="popup-overlay" id="popup">
       <div class="popup">
         <h3>Выберите лицензию для "${title}"</h3>
-        <button onclick="selectLicense('lease')">Лизинг – $29.99</button>
-        <button onclick="selectLicense('exclusive')">Эксклюзив – $199.99</button>
-        <button onclick="closePopup()">Отмена</button>
+        <button onclick="selectLicense('lease')">Leasing – $29.99</button>
+        <button onclick="selectLicense('exclusive')">Exclusive – $199.99</button>
+        <button onclick="closePopup()">Cancel</button>
       </div>
     </div>
   `;
@@ -125,6 +124,6 @@ function closeSharePopup() {
 }
 
 function selectLicense(type) {
-  alert(`Вы выбрали лицензию: ${type}`);
+  alert(`You're Licence: ${type}`);
   closePopup();
 }
