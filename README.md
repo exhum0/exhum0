@@ -27,4 +27,8 @@ I am Adam Lean, I software developer and musician.
 
 ## PS:
 
-I do not work with government, military or religious organizations.
+I do not work with government, military and religious organizations.
+
+## Links
+
+- [Website](https://exhum0.netlify.app)
