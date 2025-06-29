@@ -39,7 +39,7 @@ I am Adam Lean, I software developer and musician.
 
 2. **exhum0**
 
-- Boom bap project inspired by 90s hip-hop, 2000s urban R&B, soul and funk, as well as ethnic jazz music.The project is not active at the moment.
+- Boom bap project inspired by 90s hip-hop, 2000s urban R&B, soul and funk, as well as ethnic jazz music. The project is not active at the moment.
 
 3. **Other Projects**
 
