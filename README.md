@@ -25,3 +25,8 @@ I am Adam Lean, I software developer and musician
 - [Telegram](https://t.me/crashtheroutines)
 - [GitHub Orgranization](https://github.com/CrashTheRoutines)
 - [Website](https://crashtheroutines.netlify.app)
+
+## Projects
+
+- [Script2Call](https://script2call.netlify.app) - **Work in progress**
+- [Plastic Cult](https://github.com/adamlean/plasticcult) - **Work in progress**
