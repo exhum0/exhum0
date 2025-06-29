@@ -682,8 +682,10 @@ input, textarea {
 
 .projects-card-header {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: right;
+  gap: 5px;
   margin-bottom: 12px;
 }
 
@@ -715,4 +717,109 @@ input, textarea {
   font-size: 0.95em;
   line-height: 1.5;
   color: black;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.tech-icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+/* Projects 2 */
+
+.projects-section {
+  background-color: #0f0f2e;
+  padding: 60px 20px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-title {
+  display: flex;
+  margin-top: 5px;
+}
+
+.section-title span {
+  color: #c084fc;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.project-card {
+  background-color: #1c1b3a;
+  border-radius: 12px;
+  height: 350px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.project-info p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.tech-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.live-link {
+  font-size: 14px;
+  color: #c084fc;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.live-link:hover {
+  opacity: 0.8;
 }
