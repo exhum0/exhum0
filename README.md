@@ -1,6 +1,6 @@
 # About Me
 
-I am Adam Lean, I software developer and musician
+I am Adam Lean, I software developer and musician.
 
 ## Tools
 
