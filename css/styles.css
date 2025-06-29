@@ -296,6 +296,15 @@ html, body {
   justify-content: right;
 }
 
+.albums-gallery p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: right;
+  color: #312d2d;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
