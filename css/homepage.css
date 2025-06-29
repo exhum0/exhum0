@@ -30,7 +30,8 @@ html, body {
 }
 
 .nav_menu a {
-  color: white;
+  color: black;
+  font-style: normal;
   text-decoration: none; 
 }
 
