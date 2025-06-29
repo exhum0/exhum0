@@ -88,6 +88,7 @@ html, body {
   align-items: center;
   justify-content: center;
   padding: 60px 50px;
+  padding-bottom: 20px;
   max-width: 1400px;
   margin: 0 auto;
   gap: 60px;
