@@ -64,6 +64,15 @@ body::after {
 }
 
 .nav_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+  gap: 15px;
+  margin-top: 150px;
+  list-style: none;
+  font-size: 50px;
+
   position: relative;
   z-index: 2;
 }
@@ -73,6 +82,15 @@ body::after {
 }
 
 .icons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+
+  width: 48px;
+  height: 48px;
+  
   position: relative;
   z-index: 1;
 
