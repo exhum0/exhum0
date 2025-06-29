@@ -1,6 +1,6 @@
-# 
+# About Me
 
-I am Adam Lean, I software developer
+I am Adam Lean, I software developer and musician
 
 ## Tools
 
@@ -9,7 +9,9 @@ I am Adam Lean, I software developer
 
 <!-- <img src="./assets/svg/React.svg" width="65" height="65"> <img src="./assets/svg/typescript-logo-svgrepo-com.svg" width="65" height="65"> -->
 
-## Links
+## Crash The Routines
+
+**Crash The Routines** is a "workshop" for the mass production of websites, applications, scripts and bots for messengers.
 
 - EMail: crashtheroutine@gmail.com
 - [Instagram](https://www.instagram.com/crashtheroutines)
