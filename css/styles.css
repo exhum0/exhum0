@@ -142,6 +142,60 @@ html, body {
   background-color: #c5c5c5;
 }
 
+/* FAQ */
+
+.faq-section {
+  background-color: #1e1e1e;
+  color: #e4e4e4;
+  padding: 80px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-container h2 {
+  font-size: 36px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 40px;
+}
+
+.faq-item h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.faq-item p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.faq-item a {
+  color: #a2c4ff;
+  text-decoration: underline;
+}
+
+.faq-item a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Music */
 
 .albums-section {
