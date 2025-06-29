@@ -26,7 +26,7 @@ html, body {
 
 .nav_title {
   display: flex;
-  color: #F2F2F2;
+  color: black;
 }
 
 .nav_menu a {
@@ -68,7 +68,7 @@ html, body {
 }
 
 .icons a {
-  color: white;
+  color: black;
   font-size: 48px;
   transition: 0.3s;
 }
