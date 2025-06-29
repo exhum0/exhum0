@@ -7,7 +7,7 @@ html, body {
   background-image: url(../assets/img/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(90%)
+  filter: brightness(80%)
 }
 
 *,
