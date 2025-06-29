@@ -144,6 +144,25 @@ html, body {
 
 /* Skills */
 
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #050b20, #130658);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills-title {
+  border: 2px solid rgb(255, 255, 255);
+  display: inline-block;
+  padding: 10px 30px;
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+}
+
 .skills-category {
   margin-bottom: 40px;
 }
@@ -161,6 +180,7 @@ html, body {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   justify-items: center;
   gap: 30px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -173,8 +193,8 @@ html, body {
 }
 
 .skill img {
-  width: 30px;
-  height: 30px;
+  width: 48px;
+  height: 48px;
   margin-bottom: 8px;
 }
 
