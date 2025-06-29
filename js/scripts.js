@@ -1,3 +1,5 @@
+// Fade in-Out Page
+
 document.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', e => {
     const href = link.getAttribute('href');
