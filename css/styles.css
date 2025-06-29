@@ -646,3 +646,73 @@ input, textarea {
 .popup button:hover, .popup a:hover {
   background: #d0d0d0;
 }
+
+/* Projects */
+
+.projects-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.projects-card {
+  background: rgba(255, 255, 255, 0.3); /* Прозрачный белый фон */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.projects-card:hover {
+  transform: scale(1.02);
+}
+
+.projects-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.projects-card-content {
+  padding: 16px;
+}
+
+.projects-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.projects-card-header h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.projects-icons a {
+  margin-left: 10px;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+  font-size: 35px;
+  color: black;
+}
+
+.projects-icons a:hover {
+  color: red;
+  opacity: 1;
+}
+
+.projects-icons img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+.projects-card-content p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: black;
+}
