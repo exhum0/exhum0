@@ -301,7 +301,7 @@ html, body {
   margin-bottom: 15px;
   margin-right: 50px;
   display: flex;
-  justify-content: right;
+  justify-content: left;
   color: #000000;
 }
 
@@ -348,7 +348,7 @@ html, body {
 }
 
 .album-card .actions {
-  margin-top: 16px;
+  
   margin-right: 25px;
   display: flex;
   justify-content: flex-end;
