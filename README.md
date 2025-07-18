@@ -14,10 +14,6 @@ I am Adam Lean, I software developer and musician.
 <img src="./assets/svg/reaper.svg" width="65" height="65"> <img src="./assets/svg/flstudio.svg" width="65" height="65"> <img src="./assets/svg/figma-svgrepo-com.svg" width="65" height="65"> <img src="./assets/svg/adobe-illustrator-svgrepo-com.svg" width="65" height="65">
 <img src="./assets/svg/adobe-photoshop-svgrepo-com.svg" width="65" height="65"> <img src="./assets/svg/adobe-premiere-svgrepo-com.svg" width="65" height="65"> <img src="./assets/svg/davinci.svg" width="65" height="65">
 
-## Crash The Routines
-
-[Crash The Routines](https://github.com/CrashTheRoutines) is a "workshop" for the mass production of websites, applications, scripts and bots for messengers.
-
 ## PS:
 
 I do not work with government, military and religious organizations.
