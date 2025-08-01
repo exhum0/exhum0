@@ -23,3 +23,5 @@ I do not work with government, military and religious organizations.
 ## Links
 
 - [Website](https://adamlean.netlify.app/)
+- [Behance](https://www.behance.net/adamlean92)
+- [My Music](https://soundcloud.com/mastamonk36)
