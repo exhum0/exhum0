@@ -40,7 +40,7 @@ button { cursor: pointer; }
         transition: .3s; 
     }
         .button:hover::after { transform: scale(1); }
-.section { padding: 6.5rem 0 2rem; }
+.section { padding: 2.5rem 0 2rem; }
 .section-title { text-align: center; font-size: 1.8rem; margin-bottom: 1rem; }
     .section-title::before { content: attr(data-heading); display: block; font-size: var(--normal-font-size); font-weight: var(--font-medium); color: var(--skin-color); }
 ::-webkit-scrollbar { width: 0.6rem; background-color: var(--scroll-box-color); border-radius: .5rem; }

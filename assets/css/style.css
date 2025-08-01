@@ -109,6 +109,8 @@
 
 /* Skills */
 
+.skill {margin-top: 50px;}
+
 .skills-title { margin-bottom: 10px; display: flex; justify-content: center; }
 
 .skills-list { padding: 20px; }
