@@ -1,5 +1,3 @@
-[Русский](README_RU.md)
-
 # About Me
 
 I am Adam Lean, I software developer and musician.
