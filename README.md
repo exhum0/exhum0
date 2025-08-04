@@ -1,6 +1,12 @@
 # About Me
 
-I am Adam Lean, I software developer and musician.
+Born in Russia. International software developer and musician.  
+Real name — Dmitry.
+
+I work under the alter ego **Adam Lean** because I prefer not to use my Russian legal name.
+
+I do not collaborate with government, military, or religious organizations.  
+I support human rights, freedom of expression, and ethical software development.
 
 ## Tools
 
@@ -13,10 +19,6 @@ I am Adam Lean, I software developer and musician.
 
 <img src="./assets/svg/reaper.svg" width="65" height="65"> <img src="./assets/svg/flstudio.svg" width="65" height="65"> <img src="./assets/svg/figma-svgrepo-com.svg" width="65" height="65"> <img src="./assets/svg/adobe-illustrator-svgrepo-com.svg" width="65" height="65">
 <img src="./assets/svg/adobe-photoshop-svgrepo-com.svg" width="65" height="65"> <img src="./assets/svg/adobe-premiere-svgrepo-com.svg" width="65" height="65"> <img src="./assets/svg/davinci.svg" width="65" height="65">
-
-## PS:
-
-I do not work with government, military and religious organizations.
 
 ## Links
 
