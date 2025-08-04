@@ -1,12 +1,15 @@
 # About Me
 
-Born in Russia. International software developer and musician.  
-Real name — Dmitry.
+Hi, I'm Adam Lean — a software developer and musician working internationally.  
+Originally from Russia. Real name — Dmitry.
 
-I work under the alter ego **Adam Lean** because I prefer not to use my Russian legal name.
+I choose to work under a pseudonym for personal and professional reasons.
 
-I do not collaborate with government, military, or religious organizations.  
-I support human rights, freedom of expression, and ethical software development.
+My work is guided by ethical principles:  
+I do not collaborate with government, military, or religious institutions.  
+I support human rights, freedom of speech, and responsible software practices.
+
+I also advocate for a decentralized internet, open standards, and privacy-focused technologies — including cryptocurrencies and Web3 ecosystems.
 
 ## Tools
 
