@@ -73,14 +73,14 @@ button { cursor: pointer; }
     --z-modal: 100;
 
 
-    /* Skill Root */
+    /* Skill Root 
     --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
     --jet: hsl(0, 0%, 22%);
     --light-gray: hsl(0, 0%, 84%);
     --ff-poppins: 'Poppins', sans-serif;
     --fs7: 13px;
     --fw300: 300;
-
+*/
     /* Menu */
 /*
    --color-white-100: hsl(206, 0%, 100%);
