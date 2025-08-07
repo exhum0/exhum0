@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        // Проверяем, не выбрал ли пользователь язык ранее
+        const storedLang = localStorage.getItem("preferredLang");
+
+        // Проверяем, не находится ли уже на /ru или /en
+        const pathname = window.location.pathname;
+        const isAlreadyLocalized =
+          pathname.startsWith("/ru") || pathname.startsWith("/en");
+
+        if (storedLang && !isAlreadyLocalized) {
+          // Пользователь уже выбрал язык ранее — редиректим на него
+          window.location.href = "/" + storedLang;
+          return;
+        }
+
+        if (!storedLang && !isAlreadyLocalized) {
+          // Первый визит — определяем язык браузера
+          const browserLang = navigator.language || navigator.userLanguage;
+          const lang = browserLang.startsWith("ru") ? "ru" : "en";
+
+          // Сохраняем выбор, редиректим
+          localStorage.setItem("preferredLang", lang);
+          window.location.href = "/" + lang;
+        }
+
+        // Если уже на /ru или /en, ничего не делаем
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p>
+        Please enable JavaScript to be redirected automatically. <br />
+        Or choose your language: <a href="/en">English</a> |
+        <a href="/ru">Русский</a>
+      </p>
+    </noscript>
+  </body>
+</html>
