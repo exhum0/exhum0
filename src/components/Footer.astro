@@ -1,0 +1,24 @@
+---
+const { socialLinks, year = new Date().getFullYear(), author } = Astro.props;
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="social-icons">
+      {
+        socialLinks.map((link) => (
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            <i class={link.icon} />
+          </a>
+        ))
+      }
+    </div>
+
+    <p>&copy; {year} {author}. Все права защищены.</p>
+
+    <div class="legal-links">
+      <a href="#">Пользовательское соглашение</a>
+      <a href="#">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>

@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import lang from "../data/lang.json";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const currentLang = "ru";
+
+const socialLinks = [
+  { href: "https://github.com/adamlean", icon: "fab fa-github" },
+  { href: "https://t.me/dg404_bot", icon: "fa-brands fa-telegram" },
+  { href: "https://www.behance.net/adamlean92", icon: "fab fa-behance" },
+  {
+    href: "https://soundcloud.com/mastamonk36",
+    icon: "fa-brands fa-soundcloud",
+  },
+];
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Главная">
+  <Header menu={lang[currentLang].menu} />
+
+  <main>
+    <h1>Добро пожаловать!</h1>
+    <p>Контент главной страницы...</p>
+  </main>
+
+  <Footer socialLinks={socialLinks} author="Адам Лин" />
 </Layout>

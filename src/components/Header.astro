@@ -1,0 +1,26 @@
+---
+const { menu } = Astro.props;
+---
+
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="/" class="logo">Адам Лин</a>
+      <ul class="nav_menu">
+        {
+          menu.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener noreferrer" : undefined}
+              >
+                {item.text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
