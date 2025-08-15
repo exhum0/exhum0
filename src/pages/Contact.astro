@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import lang from "../data/lang.json";
+
+const currentLang = "ru";
+
+const socialLinks = [
+  { href: "https://github.com/adamlean", icon: "fab fa-github" },
+  { href: "https://t.me/dg404_bot", icon: "fa-brands fa-telegram" },
+  { href: "https://www.behance.net/adamlean92", icon: "fab fa-behance" },
+  {
+    href: "https://soundcloud.com/mastamonk36",
+    icon: "fa-brands fa-soundcloud",
+  },
+];
+---
+
+<Layout title="Проекты | Адам Лин">
+  <Header menu={lang[currentLang].menu} />
+
+  <main class="content">
+    <section class="contacts">
+      <div class="container">
+        <form class="container mt-4">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              placeholder="Enter message..."
+              required></textarea>
+          </div>
+
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="consent"
+              required
+            />
+            <label class="form-check-label" for="consent">
+              I agree with the personal data processing policy
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-danger">Submit</button>
+        </form>
+      </div>
+    </section>
+    <div class="subscribe-section">
+      <div class="container">
+        <form class="subscribe-form">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit">Subscribe Now</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <Footer socialLinks={socialLinks} author="Адам Лин" />
+</Layout>
