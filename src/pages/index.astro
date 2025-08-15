@@ -6,24 +6,9 @@ import About from "../components/About.astro";
 import Skills from "../components/Skills.astro";
 import translations from "../data/lang.json";
 
-export async function getStaticPaths() {
-  return [{ params: { lang: "ru" } }, { params: { lang: "en" } }];
-}
-
-type Lang = "ru" | "en";
-
-interface Translation {
-  meta: {
-    title: string;
-    author: string;
-  };
-  menu: string[];
-  aboutData: Record<string, any>;
-  skillsData: Record<string, any>;
-}
-
-const { lang } = Astro.params as { lang: Lang };
-const t = translations[lang];
+const { lang } = Astro.params;
+const currentLang = (lang || "ru") as keyof typeof translations;
+const t = translations[currentLang];
 
 const socialLinks = [
   { href: "https://github.com/adamlean", icon: "fab fa-github" },
