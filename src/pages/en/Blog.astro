@@ -1,11 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import langData from "../data/lang.json";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import langData from "../../data/lang.json";
 import { getCollection } from "astro:content";
 
-const currentLang = "ru"; // позже можно брать из URL search params
+const currentLang = "en"; // позже можно брать из URL search params
 
 const socialLinks = [
   { href: "https://github.com/adamlean", icon: "fab fa-github" },
@@ -23,7 +23,7 @@ const posts = await getCollection("blog", ({ slug }) =>
 );
 ---
 
-<Layout title={currentLang === "ru" ? "Блог | Адам Лин" : "Blog | Adam Lean"}>
+<Layout title={currentLang === "en" ? "Блог | Адам Лин" : "Blog | Adam Lean"}>
   <Header menu={langData[currentLang].menu} />
 
   <main class="content">
@@ -41,11 +41,11 @@ const posts = await getCollection("blog", ({ slug }) =>
             ))}
           </ul>
         ) : (
-          <p>{currentLang === "ru" ? "Нет постов" : "No posts available"}</p>
+          <p>{currentLang === "en" ? "Нет постов" : "No posts available"}</p>
         )
       }
     </section>
   </main>
 
-  <Footer socialLinks={socialLinks} author="Адам Лин" />
+  <Footer socialLinks={socialLinks} author="Adam Lean" />
 </Layout>
