@@ -5,7 +5,45 @@
       { "href": "/projects", "text": "Проекты" },
       { "href": "https://t.me/dg404_bot", "text": "Контакты", "external": true },
       { "href": "/en", "text": "EN" }
-    ]
+    ],
+    "aboutData": {
+      "imageSrc": "../assets/img/hero-photo.jpg",
+      "imageAlt": "Portrait of Adam Lean",
+      "title": "Обо мне",
+      "subtitle": "Привет, меня зовут Дмитрий. Я делаю веб-сайты, приложение и боты.",
+      "paragraphs": [
+        "Основной фокус — JS и Python. PHP только для Wordpress. Tilda для быстрой разработки.",
+        "Работаю под псевдонимом Adam Lean, так как мне не нравится мое русское ФИО.",
+        "Не работаю с государственными, военными и религиозными организациями. Только потребительская сфера!"
+      ],
+      "contactLink": {
+        "href": "https://t.me/dg404_bot",
+        "text": "Связаться со мной"
+      }
+    },
+    "skillsData": {
+      "title": "Skills",
+      "skills": [
+        { "name": "HTML", "icon": "../assets/svg/html5.svg" },
+        { "name": "CSS", "icon": "../assets/svg/css3.svg" },
+        { "name": "JavaScript", "icon": "../assets/svg/JS.svg" },
+        { "name": "TypeScript", "icon": "../assets/svg/typescript-logo-svgrepo-com.svg" },
+        { "name": "React", "icon": "../assets/svg/React.svg" },
+        { "name": "Vue", "icon": "../assets/svg/vue-vuejs-javascript-js-framework-svgrepo-com.svg" },
+        { "name": "Svelte", "icon": "../assets/svg/svelte-svgrepo-com.svg" },
+        { "name": "Python", "icon": "../assets/svg/python.svg" },
+        { "name": "PHP", "icon": "../assets/svg/php.svg" },
+        { "name": "Git", "icon": "../assets/svg/git-icon-logo-svgrepo-com.svg" },
+        { "name": "Webpack", "icon": "../assets/svg/webpack-svgrepo-com.svg" },
+        { "name": "Vite", "icon": "../assets/svg/vite-svgrepo-com.svg" },
+        { "name": "WordPress", "icon": "../assets/svg/wordpress.svg" },
+        { "name": "Tilda", "icon": "../assets/svg/tilda.svg" },
+        { "name": "Illustrator", "icon": "../assets/svg/adobe-illustrator-svgrepo-com.svg" },
+        { "name": "Photoshop", "icon": "../assets/svg/adobe-photoshop-svgrepo-com.svg" },
+        { "name": "Premiere", "icon": "../assets/svg/adobe-premiere-svgrepo-com.svg" },
+        { "name": "ChatGPT", "icon": "../assets/svg/chatgpt.svg" }
+      ]
+    }
   },
   "en": {
     "menu": [
@@ -13,6 +51,44 @@
       { "href": "/en/projects", "text": "Projects" },
       { "href": "https://t.me/dg404_bot", "text": "Contact", "external": true },
       { "href": "/", "text": "RU" }
-    ]
+    ],
+    "aboutData": {
+      "imageSrc": "../assets/img/hero-photo.jpg",
+      "imageAlt": "Portrait of Adam Lean",
+      "title": "About me",
+      "subtitle": "Hi, my name is Dmitry. I make websites, apps and bots.",
+      "paragraphs": [
+        "Main focus — JS and Python. PHP only for Wordpress. Tilda for fast development.",
+        "I work under the pseudonym Adam Lean because I don't like my Russian full name.",
+        "I do not work with government, military or religious organizations. Only consumer sphere!"
+      ],
+      "contactLink": {
+        "href": "https://t.me/dg404_bot",
+        "text": "Contact me"
+      }
+    },
+    "skillsData": {
+      "title": "Skills",
+      "skills": [
+        { "name": "HTML", "icon": "../assets/svg/html5.svg" },
+        { "name": "CSS", "icon": "../assets/svg/css3.svg" },
+        { "name": "JavaScript", "icon": "../assets/svg/JS.svg" },
+        { "name": "TypeScript", "icon": "../assets/svg/typescript-logo-svgrepo-com.svg" },
+        { "name": "React", "icon": "../assets/svg/React.svg" },
+        { "name": "Vue", "icon": "../assets/svg/vue-vuejs-javascript-js-framework-svgrepo-com.svg" },
+        { "name": "Svelte", "icon": "../assets/svg/svelte-svgrepo-com.svg" },
+        { "name": "Python", "icon": "../assets/svg/python.svg" },
+        { "name": "PHP", "icon": "../assets/svg/php.svg" },
+        { "name": "Git", "icon": "../assets/svg/git-icon-logo-svgrepo-com.svg" },
+        { "name": "Webpack", "icon": "../assets/svg/webpack-svgrepo-com.svg" },
+        { "name": "Vite", "icon": "../assets/svg/vite-svgrepo-com.svg" },
+        { "name": "WordPress", "icon": "../assets/svg/wordpress.svg" },
+        { "name": "Tilda", "icon": "../assets/svg/tilda.svg" },
+        { "name": "Illustrator", "icon": "../assets/svg/adobe-illustrator-svgrepo-com.svg" },
+        { "name": "Photoshop", "icon": "../assets/svg/adobe-photoshop-svgrepo-com.svg" },
+        { "name": "Premiere", "icon": "../assets/svg/adobe-premiere-svgrepo-com.svg" },
+        { "name": "ChatGPT", "icon": "../assets/svg/chatgpt.svg" }
+      ]
+    }
   }
 }
