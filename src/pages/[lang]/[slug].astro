@@ -51,20 +51,22 @@ const socialLinks = [
   <Header menu={langData[lang].menu} />
 
   <main class="content">
-    <article>
-      <h1>{post.data.title}</h1>
-      <p>
-        <em>
-          {
-            post.data.date instanceof Date
-              ? post.data.date.toLocaleDateString(lang)
-              : post.data.date
-          }
-        </em>
-      </p>
+    <div class="container">
+      <article>
+        <h1 class="post-title">{post.data.title}</h1>
+        <p>
+          <em>
+            {
+              post.data.date instanceof Date
+                ? post.data.date.toLocaleDateString(lang)
+                : post.data.date
+            }
+          </em>
+        </p>
 
-      <Content />
-    </article>
+        <Content />
+      </article>
+    </div>
   </main>
 
   <Footer socialLinks={socialLinks} author="Adam Lean" />
