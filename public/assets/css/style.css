@@ -574,6 +574,7 @@ input, textarea {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 12px;
+  text-decoration: none;
 }
 
 .post-meta {
@@ -595,4 +596,18 @@ input, textarea {
   .posts-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Post */
+
+.article-title {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.article-disc {
+  display: flex;
+  justify-content: center;
+  font-size: 18px
 }
