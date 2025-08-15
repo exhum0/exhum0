@@ -5,7 +5,7 @@ import Footer from "../../components/Footer.astro";
 import Works from "../../components/Works.astro";
 import lang from "../../data/lang.json";
 
-const currentLang = "ru";
+const currentLang = "en";
 
 const socialLinks = [
   { href: "https://github.com/adamlean", icon: "fab fa-github" },
@@ -18,12 +18,12 @@ const socialLinks = [
 ];
 ---
 
-<Layout title="Projects | Адам Лин">
+<Layout title="Projects | Adam Lean">
   <Header menu={lang[currentLang].menu} />
 
   <main class="content">
     <Works />
   </main>
 
-  <Footer socialLinks={socialLinks} author="Адам Лин" />
+  <Footer socialLinks={socialLinks} author="Adam Lean" />
 </Layout>
