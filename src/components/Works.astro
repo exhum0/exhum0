@@ -1,0 +1,48 @@
+---
+import works from "../data/portfolio.json";
+---
+
+<section class="work section" id="work">
+  <div class="work-filters">
+    <span class="work-item active-work" data-filter="all">All</span>
+    <span class="work-item" data-filter=".web">Web</span>
+    <span class="work-item" data-filter=".wordpress">Wordpress</span>
+    <span class="work-item" data-filter=".react">React</span>
+    <span class="work-item" data-filter=".python">Python</span>
+  </div>
+
+  <div class="work-container container grid">
+    {
+      works.map((work) => (
+        <div class={`work-card mix ${work.category}`}>
+          <img src={work.img} alt={work.title} class="work-img" />
+          <h3 class="work-title">{work.title}</h3>
+          <span class="work-button">
+            Посмотреть
+            <i class="uil uil-arrow-right work-button-icon" />
+          </span>
+
+          <div class="portfolio-item-details">
+            <h3 class="details-title">{work.detailsTitle}</h3>
+            <p class="details-description">{work.description}</p>
+            <ul class="details-info">
+              <li>
+                Стек - <span>{work.stack}</span>
+              </li>
+              <li>
+                Демо -
+                <span>
+                  <a href={work.demo} target="_blank">
+                    {work.demo}
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script src="/assets/js/main.js" is:inline></script>

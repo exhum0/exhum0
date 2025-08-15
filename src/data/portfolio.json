@@ -1,42 +1,56 @@
-{
-  "ru": [
-    {
-      "category": "web",
-      "image": "../assets/img/webgithub.png",
-      "title": "Верстка",
-      "detailsTitle": "Коллекция работ по верстке",
-      "detailsDescription": "Классическая верстка с использованием различных библиотек.",
-      "stack": "html css js",
-      "demo": "https://github.com/adamlean/web-portfolio"
-    },
-    {
-      "category": "web",
-      "image": "https://i.postimg.cc/43Th5VXJ/work-1.png",
-      "title": "Поставщик дальнего востока",
-      "detailsTitle": "Поставщик дальнего востока",
-      "detailsDescription": "Лендинг, реализованный с помощью чистой верстки. Соблюдены все правила BEM, а также присутствует адаптивность",
-      "stack": "html css",
-      "demo": "https://pdv-page.netlify.app/"
-    }
-  ],
-  "en": [
-    {
-      "category": "web",
-      "image": "../assets/img/webgithub.png",
-      "title": "Layout",
-      "detailsTitle": "Collection of layout works",
-      "detailsDescription": "Classic layout using various libraries.",
-      "stack": "html css js",
-      "demo": "https://github.com/adamlean/web-portfolio"
-    },
-    {
-      "category": "web",
-      "image": "https://i.postimg.cc/43Th5VXJ/work-1.png",
-      "title": "Far East Supplier",
-      "detailsTitle": "Far East Supplier",
-      "detailsDescription": "Landing page implemented with pure HTML/CSS. BEM rules followed, responsive design included.",
-      "stack": "html css",
-      "demo": "https://pdv-page.netlify.app/"
-    }
-  ]
-}
+[
+  {
+    "category": "web",
+    "img": "../assets/img/webgithub.png",
+    "title": "Верстка",
+    "detailsTitle": "Коллекция работ по верстке",
+    "description": "Классическая верстка с использованием различных библиотек.",
+    "stack": "html css js",
+    "demo": "https://github.com/adamlean/web-portfolio"
+  },
+  {
+    "category": "web",
+    "img": "https://i.postimg.cc/43Th5VXJ/work-1.png",
+    "title": "Поставщик дальнего востока",
+    "detailsTitle": "Поставщик дальнего востока",
+    "description": "Лендинг, реализованный с помощью чистой верстки. Соблюдены все правила BEM, а также присутствует адаптивность",
+    "stack": "html css",
+    "demo": "https://pdv-page.netlify.app/"
+  },
+  {
+    "category": "web",
+    "img": "../assets/img/carsev.png",
+    "title": "Автосервис",
+    "detailsTitle": "Лендинг для автосервиса",
+    "description": "Реализован на чистом HTML / CSS. Двухязычная версия.",
+    "stack": "html css",
+    "demo": "https://carservice-landing.netlify.app"
+  },
+  {
+    "category": "web",
+    "img": "../assets/img/luxdet.png",
+    "title": "Luxury Detail",
+    "detailsTitle": "Сайт по ремонту автомобилей класса люкс",
+    "description": "Двухязычный сайт, реализованный на чистом HTML и CSS.",
+    "stack": "html css",
+    "demo": "https://luxurydetail.netlify.app"
+  },
+  {
+    "category": "web",
+    "img": "../assets/img/wbport.png",
+    "title": "Wishbone+Partners",
+    "detailsTitle": "Сайт архитектурного бюро",
+    "description": "Двухязычный сайт, реализованный на чистом HTML и CSS.",
+    "stack": "html css",
+    "demo": "https://wishboneportfolio.netlify.app"
+  },
+  {
+    "category": "web",
+    "img": "../assets/img/wolfmedia.png",
+    "title": "WolfMedia",
+    "detailsTitle": "Сайт диджитал-агенства",
+    "description": "Сайт реализован на чистом HTML с Tailwind CSS.",
+    "stack": "HTML / Tailwind CSS",
+    "demo": "https://w0lfmedia.netlify.app"
+  }
+]
