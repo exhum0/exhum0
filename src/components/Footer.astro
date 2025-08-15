@@ -1,5 +1,18 @@
 ---
-const { socialLinks, year = new Date().getFullYear(), author } = Astro.props;
+interface SocialLink {
+  href: string;
+  icon: string;
+}
+
+const {
+  socialLinks,
+  year = new Date().getFullYear(),
+  author,
+} = Astro.props as {
+  socialLinks: SocialLink[];
+  year?: number;
+  author: string;
+};
 ---
 
 <footer class="footer">

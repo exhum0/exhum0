@@ -1,5 +1,11 @@
 ---
-const { menu } = Astro.props;
+interface MenuItem {
+  href: string;
+  text: string;
+  external?: boolean;
+}
+
+const { menu } = Astro.props as { menu: MenuItem[] };
 ---
 
 <header class="header">
