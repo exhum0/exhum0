@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import About from "../components/About.astro";
+import Skills from "../components/Skills.astro";
 import lang from "../data/lang.json";
 
 const currentLang = "ru";
@@ -17,134 +19,10 @@ const socialLinks = [
 ];
 ---
 
-<Layout title="Главная">
+<Layout title="Главная | Адам Лин">
   <Header menu={lang[currentLang].menu} />
-
-  <main class="content">
-    <section class="about" id="about">
-      <div class="about__image">
-        <img src="../assets/img/hero-photo.jpg" alt="Portrait of Adam Lean" />
-      </div>
-      <div class="about__text">
-        <h4>Обо мне</h4>
-        <h1>
-          Привет, меня зовут Дмитрий. Я делаю веб-сайты, приложение и боты.
-        </h1>
-        <p>
-          Основной фокус — JS и Python. PHP только для Wordpress. Tilda для
-          быстрой разработки.
-        </p>
-        <p>
-          Работаю под псевдонимом Adam Lean, так как мне не нравится мое русское
-          ФИО.
-        </p>
-        <p>
-          Не работаю с государственными, военными и религиозными организациями.
-          Только потребительская сфера!
-        </p>
-        <a href="https://t.me/dg404_bot" class="contact-btn" target="_blank"
-          >Связаться со мной</a
-        >
-      </div>
-    </section>
-
-    <section class="skills-section" id="skills">
-      <h2 class="skills-title">Skills</h2>
-      <div class="skills-category">
-        <div class="skills-grid">
-          <div class="skill">
-            <img src="../assets/svg/html5.svg" alt="HTML" /><span>HTML</span>
-          </div>
-          <div class="skill">
-            <img src="../assets/svg/css3.svg" alt="CSS" /><span>CSS</span>
-          </div>
-          <div class="skill">
-            <img src="../assets/svg/JS.svg" alt="JavaScript" /><span
-              >JavaScript</span
-            >
-          </div>
-          <div class="skill">
-            <img
-              src="../assets/svg/typescript-logo-svgrepo-com.svg"
-              alt="TypeScript"
-            /><span>TypeScript</span>
-          </div>
-          <div class="skill">
-            <img src="../assets/svg/React.svg" alt="React" /><span>React</span>
-          </div>
-          <div class="skill">
-            <img
-              src="../assets/svg/vue-vuejs-javascript-js-framework-svgrepo-com.svg"
-              alt="Vue"
-            /><span>Vue</span>
-          </div>
-          <div class="skill">
-            <img src="../assets/svg/svelte-svgrepo-com.svg" alt="Svelte" /><span
-              >Svelte</span
-            >
-          </div>
-          <div class="skill">
-            <img src="../assets/svg/python.svg" alt="Python" /><span
-              >Python</span
-            >
-          </div>
-          <div class="skill">
-            <img src="../assets/svg/php.svg" alt="PHP" /><span>PHP</span>
-          </div>
-
-          <div class="skill">
-            <img
-              src="../assets/svg/git-icon-logo-svgrepo-com.svg"
-              alt="Git"
-            /><span>Git</span>
-          </div>
-          <div class="skill">
-            <img
-              src="../assets/svg/webpack-svgrepo-com.svg"
-              alt="Webpack"
-            /><span>Webpack</span>
-          </div>
-          <div class="skill">
-            <img src="../assets/svg/vite-svgrepo-com.svg" alt="Vite" /><span
-              >Vite</span
-            >
-          </div>
-          <div class="skill">
-            <img src="../assets/svg/wordpress.svg" alt="WordPress" /><span
-              >WordPress</span
-            >
-          </div>
-          <div class="skill">
-            <img src="../assets/svg/tilda.svg" alt="Tilda" /><span>Tilda</span>
-          </div>
-
-          <div class="skill">
-            <img
-              src="../assets/svg/adobe-illustrator-svgrepo-com.svg"
-              alt="Adobe Illustrator"
-            /><span>Illustrator</span>
-          </div>
-          <div class="skill">
-            <img
-              src="../assets/svg/adobe-photoshop-svgrepo-com.svg"
-              alt="Adobe Photoshop"
-            /><span>Photoshop</span>
-          </div>
-          <div class="skill">
-            <img
-              src="../assets/svg/adobe-premiere-svgrepo-com.svg"
-              alt="Adobe Premiere"
-            /><span>Premiere</span>
-          </div>
-          <div class="skill">
-            <img src="../assets/svg/chatgpt.svg" alt="ChatGPT" /><span
-              >ChatGPT</span
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+  <About {...About} />
+  <Skills {...Skills} />
 
   <Footer socialLinks={socialLinks} author="Адам Лин" />
 </Layout>

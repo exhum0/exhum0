@@ -1,0 +1,19 @@
+---
+const { title, skills } = Astro.props;
+---
+
+<section class="skills-section" id="skills">
+  <h2 class="skills-title">{title}</h2>
+  <div class="skills-category">
+    <div class="skills-grid">
+      {
+        skills.map((skill) => (
+          <div class="skill">
+            <img src={skill.icon} alt={skill.name} />
+            <span>{skill.name}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
