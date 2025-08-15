@@ -5,7 +5,7 @@ import Footer from "../../components/Footer.astro";
 import langData from "../../data/lang.json";
 import { getCollection } from "astro:content";
 
-const currentLang = "en"; // позже можно брать из URL search params
+const currentLang = "en";
 
 const socialLinks = [
   { href: "https://github.com/adamlean", icon: "fab fa-github" },
@@ -17,13 +17,12 @@ const socialLinks = [
   },
 ];
 
-// Загружаем только посты для текущего языка
 const posts = await getCollection("blog", ({ slug }) =>
   slug.startsWith(`${currentLang}/`)
 );
 ---
 
-<Layout title={currentLang === "en" ? "Блог | Адам Лин" : "Blog | Adam Lean"}>
+<Layout title="Blog | Adam Lean">
   <Header menu={langData[currentLang].menu} />
 
   <main class="content">
@@ -33,15 +32,13 @@ const posts = await getCollection("blog", ({ slug }) =>
           <ul>
             {posts.map((post) => (
               <li>
-                <a href={`/blog/${post.slug}?lang=${currentLang}`}>
-                  {post.data.title}
-                </a>
+                <a href={`/blog/${post.slug}`}>{post.data.title}</a>
                 {post.data.description && <p>{post.data.description}</p>}
               </li>
             ))}
           </ul>
         ) : (
-          <p>{currentLang === "en" ? "Нет постов" : "No posts available"}</p>
+          <p>No posts available</p>
         )
       }
     </section>
