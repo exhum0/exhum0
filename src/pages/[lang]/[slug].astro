@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+interface Params {
+  lang: "ru" | "en";
+  slug: string;
+}
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+export async function getStaticPaths() {
+  // Берём только записи вида "en/..." или "ru/..."
+  const posts = await getCollection("blog", ({ slug }) =>
+    /^(en|ru)\//.test(slug)
+  );
+
+  return posts.map((post) => {
+    const [lang, slug] = post.slug.split("/"); // "en/first" -> ["en","first"]
+    return {
+      params: { lang: lang as Params["lang"], slug },
+      props: { post },
+    };
+  });
+}
+
+const { post } = Astro.props as Props;
+const { lang } = Astro.params as Params;
+
+// Получаем React/Preact-компонент для содержимого MD/MDX
+const { Content, headings } = await post.render();
+---
+
+<article>
+  <h1>{post.data.title}</h1>
+  <p>
+    <em>
+      {
+        post.data.date instanceof Date
+          ? post.data.date.toLocaleDateString(lang)
+          : post.data.date
+      }
+    </em>
+  </p>
+
+  <Content />
+</article>
