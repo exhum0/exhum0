@@ -26,22 +26,24 @@ const posts = await getCollection("blog", ({ slug }) =>
   <Header menu={langData[currentLang].menu} />
 
   <main class="content">
-    <section>
-      {
-        posts.length > 0 ? (
-          <ul>
-            {posts.map((post) => (
-              <li>
-                <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-                {post.data.description && <p>{post.data.description}</p>}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>No posts available</p>
-        )
-      }
-    </section>
+    <div>
+      <div class="container">
+        {
+          posts.length > 0 ? (
+            <ul>
+              {posts.map((post) => (
+                <li>
+                  <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+                  {post.data.description && <p>{post.data.description}</p>}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>No posts available</p>
+          )
+        }
+      </div>
+    </div>
   </main>
 
   <Footer socialLinks={socialLinks} author="Adam Lean" />

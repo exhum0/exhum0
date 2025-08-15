@@ -27,20 +27,22 @@ const posts = await getCollection("blog", ({ slug }) =>
 
   <main class="content">
     <section>
-      {
-        posts.length > 0 ? (
-          <ul>
-            {posts.map((post) => (
-              <li>
-                <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-                {post.data.description && <p>{post.data.description}</p>}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>Нет постов</p>
-        )
-      }
+      <div class="container">
+        {
+          posts.length > 0 ? (
+            <ul>
+              {posts.map((post) => (
+                <li>
+                  <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+                  {post.data.description && <p>{post.data.description}</p>}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>Нет постов</p>
+          )
+        }
+      </div>
     </section>
   </main>
 
