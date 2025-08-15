@@ -1,23 +1,48 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import langData from "../data/lang.json";
 import { getCollection } from "astro:content";
 
-const lang = Astro.url.searchParams.get("lang") || "ru";
+const currentLang = "ru"; // можно потом сделать из query параметра
 
+const socialLinks = [
+  { href: "https://github.com/adamlean", icon: "fab fa-github" },
+  { href: "https://t.me/dg404_bot", icon: "fa-brands fa-telegram" },
+  { href: "https://www.behance.net/adamlean92", icon: "fab fa-behance" },
+  {
+    href: "https://soundcloud.com/mastamonk36",
+    icon: "fa-brands fa-soundcloud",
+  },
+];
+
+// Загружаем посты для текущего языка
 const posts = await getCollection("blog", ({ id }) =>
-  id.startsWith(`blog/${lang}/`)
+  id.startsWith(`blog/${currentLang}/`)
 );
 ---
 
-<section>
-  <h1>{lang === "ru" ? "Блог" : "Blog"}</h1>
-  <ul>
-    {
-      posts.map((post) => (
-        <li>
-          <a href={`/blog/${post.slug}?lang=${lang}`}>{post.data.title}</a>
-          {post.data.description && <p>{post.data.description}</p>}
-        </li>
-      ))
-    }
-  </ul>
-</section>
+<Layout title={currentLang === "ru" ? "Блог | Адам Лин" : "Blog | Adam Lean"}>
+  <Header menu={langData[currentLang].menu} />
+
+  <main class="content">
+    <section>
+      <h1>{currentLang === "ru" ? "Блог" : "Blog"}</h1>
+      <ul>
+        {
+          posts.map((post) => (
+            <li>
+              <a href={`/blog/${post.slug}?lang=${currentLang}`}>
+                {post.data.title}
+              </a>
+              {post.data.description && <p>{post.data.description}</p>}
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+
+  <Footer socialLinks={socialLinks} author="Адам Лин" />
+</Layout>
