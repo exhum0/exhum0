@@ -577,7 +577,7 @@ input, textarea {
   margin-bottom: 12px;
 }
 
-.post-title:hover {
+.post-title a:hover {
   color: blue;
 }
 
