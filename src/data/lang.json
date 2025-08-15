@@ -3,6 +3,7 @@
     "menu": [
       { "href": "/", "text": "Обо мне" },
       { "href": "Portfolio", "text": "Проекты" },
+      { "href": "Blog", "text": "Блог" },
       { "href": "https://t.me/dg404_bot", "text": "Контакты", "external": true },
       { "href": "/en", "text": "EN" }
     ],
@@ -49,6 +50,7 @@
     "menu": [
       { "href": "/en", "text": "About me" },
       { "href": "/en/Portfolio", "text": "Projects" },
+      { "href": "/en/Blog", "text": "Blog" },
       { "href": "https://t.me/dg404_bot", "text": "Contact", "external": true },
       { "href": "/", "text": "RU" }
     ],
