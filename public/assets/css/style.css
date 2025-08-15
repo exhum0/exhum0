@@ -602,17 +602,18 @@ input, textarea {
 
 .article-container {
   margin-top: 25px;
-  display: flex
+  display: flex;
+  justify-content: center;
 }
 
 .article-title {
   display: flex;
   justify-content: center;
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .article-disc {
   display: flex;
   justify-content: center;
-  font-size: 28px
+  font-size: 24px
 }
