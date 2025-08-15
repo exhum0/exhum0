@@ -7,6 +7,7 @@
     "menu": [
       { "href": "/", "text": "Обо мне" },
       { "href": "/Portfolio", "text": "Проекты" },
+      { "href": "/Blog", "text": "Блог" },
       { "href": "https://t.me/dg404_bot", "text": "Контакты", "external": true },
       { "href": "/en", "text": "EN" }
     ],

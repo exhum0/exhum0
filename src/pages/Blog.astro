@@ -1,0 +1,176 @@
+---
+import { getCollection } from "astro:content";
+
+const lang = Astro.url.searchParams.get("lang") || "ru";
+const posts = await getCollection("blog", ({ id }) =>
+  id.startsWith(`blog/${lang}/`)
+);
+---
+
+<section>
+  <h1>{lang === "ru" ? "Блог" : "Blog"}</h1>
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.slug}?lang=${lang}`}>{post.data.title}</a>
+          <p>{post.data.description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<section class="latest-posts">
+  <div class="container">
+    <h2 class="section-title">Latest Post</h2>
+    <div class="posts-grid">
+      <article class="post-card">
+        <img
+          src="./assets/img/image-1.png"
+          alt="Post Image"
+          class="post-image"
+        />
+        <div class="post-content">
+          <span class="post-tag">Technology</span>
+          <h3 class="post-title">
+            The Impact of Technology on the Workplace: How Technology is
+            Changing
+          </h3>
+          <div class="post-meta">
+            <img
+              src="./assets/img/avatar.png"
+              alt="Author"
+              class="post-avatar"
+            />
+            <span class="post-author">Tracey Wilson</span>
+            <span class="post-date">August 20, 2022</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img
+          src="./assets/img/image-2.png"
+          alt="Post Image"
+          class="post-image"
+        />
+        <div class="post-content">
+          <span class="post-tag">Technology</span>
+          <h3 class="post-title">
+            The Impact of Technology on the Workplace: How Technology is
+            Changing
+          </h3>
+          <div class="post-meta">
+            <img
+              src="./assets/img/avatar.png"
+              alt="Author"
+              class="post-avatar"
+            />
+            <span class="post-author">Tracey Wilson</span>
+            <span class="post-date">August 20, 2022</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img
+          src="./assets/img/image-3.png"
+          alt="Post Image"
+          class="post-image"
+        />
+        <div class="post-content">
+          <span class="post-tag">Technology</span>
+          <h3 class="post-title">
+            The Impact of Technology on the Workplace: How Technology is
+            Changing
+          </h3>
+          <div class="post-meta">
+            <img
+              src="./assets/img/avatar.png"
+              alt="Author"
+              class="post-avatar"
+            />
+            <span class="post-author">Tracey Wilson</span>
+            <span class="post-date">August 20, 2022</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img
+          src="./assets/img/image-4.png"
+          alt="Post Image"
+          class="post-image"
+        />
+        <div class="post-content">
+          <span class="post-tag">Technology</span>
+          <h3 class="post-title">
+            The Impact of Technology on the Workplace: How Technology is
+            Changing
+          </h3>
+          <div class="post-meta">
+            <img
+              src="./assets/img/avatar.png"
+              alt="Author"
+              class="post-avatar"
+            />
+            <span class="post-author">Tracey Wilson</span>
+            <span class="post-date">August 20, 2022</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <img
+          src="./assets/img/image-5.png"
+          alt="Post Image"
+          class="post-image"
+        />
+        <div class="post-content">
+          <span class="post-tag">Technology</span>
+          <h3 class="post-title">
+            The Impact of Technology on the Workplace: How Technology is
+            Changing
+          </h3>
+          <div class="post-meta">
+            <img
+              src="./assets/img/avatar.png"
+              alt="Author"
+              class="post-avatar"
+            />
+            <span class="post-author">Tracey Wilson</span>
+            <span class="post-date">August 20, 2022</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Дублируем остальные карточки -->
+      <article class="post-card">
+        <img
+          src="./assets/img/image-6.png"
+          alt="Post Image"
+          class="post-image"
+        />
+        <div class="post-content">
+          <span class="post-tag">Technology</span>
+          <h3 class="post-title">
+            The Impact of Technology on the Workplace: How Technology is
+            Changing
+          </h3>
+          <div class="post-meta">
+            <img
+              src="./assets/img/avatar.png"
+              alt="Author"
+              class="post-avatar"
+            />
+            <span class="post-author">Jason Francisco</span>
+            <span class="post-date">August 20, 2022</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- И так далее -->
+    </div>
+  </div>
+</section>

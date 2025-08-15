@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import { Markdown } from "astro/components";
+
+const lang = Astro.url.searchParams.get("lang") || "ru";
+const { slug } = Astro.params;
+
+const posts = await getCollection("blog", ({ id }) =>
+  id.startsWith(`blog/${lang}/`)
+);
+const post = posts.find((p) => p.slug === `${lang}/${slug}`);
+
+if (!post) {
+  throw new Error(`Пост ${slug} не найден`);
+}
+---
+
+<article>
+  <h1>{post.data.title}</h1>
+  <p><em>{post.data.date.toLocaleDateString()}</em></p>
+  <Markdown content={post.body} />
+</article>
