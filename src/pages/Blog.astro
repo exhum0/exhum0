@@ -5,7 +5,7 @@ import Footer from "../components/Footer.astro";
 import langData from "../data/lang.json";
 import { getCollection } from "astro:content";
 
-const currentLang = "ru"; // можно потом сделать из query параметра
+const currentLang = "ru"; // позже можно брать из URL search params
 
 const socialLinks = [
   { href: "https://github.com/adamlean", icon: "fab fa-github" },
@@ -17,9 +17,9 @@ const socialLinks = [
   },
 ];
 
-// Загружаем посты для текущего языка
-const posts = await getCollection("blog", ({ id }) =>
-  id.startsWith(`blog/${currentLang}/`)
+// Загружаем только посты для текущего языка
+const posts = await getCollection("blog", ({ slug }) =>
+  slug.startsWith(`${currentLang}/`)
 );
 ---
 
@@ -29,18 +29,22 @@ const posts = await getCollection("blog", ({ id }) =>
   <main class="content">
     <section>
       <h1>{currentLang === "ru" ? "Блог" : "Blog"}</h1>
-      <ul>
-        {
-          posts.map((post) => (
-            <li>
-              <a href={`/blog/${post.slug}?lang=${currentLang}`}>
-                {post.data.title}
-              </a>
-              {post.data.description && <p>{post.data.description}</p>}
-            </li>
-          ))
-        }
-      </ul>
+      {
+        posts.length > 0 ? (
+          <ul>
+            {posts.map((post) => (
+              <li>
+                <a href={`/blog/${post.slug}?lang=${currentLang}`}>
+                  {post.data.title}
+                </a>
+                {post.data.description && <p>{post.data.description}</p>}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>{currentLang === "ru" ? "Нет постов" : "No posts available"}</p>
+        )
+      }
     </section>
   </main>
 
