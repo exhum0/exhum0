@@ -2,7 +2,7 @@
   {
     "category": "web",
     "img": "../../assets/img/webgithub.png",
-    "title": "Верстка",
+    "title": "Web Portfolio",
     "detailsTitle": "Коллекция работ по верстке",
     "description": "Классическая верстка с использованием различных библиотек.",
     "stack": "html css js",
