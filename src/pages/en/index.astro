@@ -1,0 +1,29 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import About from "../../components/About.astro";
+import Skills from "../../components/Skills.astro";
+import translations from "../../data/lang.json";
+
+const { lang } = Astro.params;
+const currentLang = (lang || "en") as keyof typeof translations;
+const t = translations[currentLang];
+
+const socialLinks = [
+  { href: "https://github.com/adamlean", icon: "fab fa-github" },
+  { href: "https://t.me/dg404_bot", icon: "fa-brands fa-telegram" },
+  { href: "https://www.behance.net/adamlean92", icon: "fab fa-behance" },
+  {
+    href: "https://soundcloud.com/mastamonk36",
+    icon: "fa-brands fa-soundcloud",
+  },
+];
+---
+
+<Layout title={t.meta.title} author={t.meta.author}>
+  <Header menu={t.menu} />
+  <About {...t.aboutData} />
+  <Skills {...t.skillsData} />
+  <Footer socialLinks={socialLinks} author={t.meta.author} />
+</Layout>

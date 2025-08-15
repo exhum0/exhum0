@@ -1,0 +1,29 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Works from "../../components/Works.astro";
+import lang from "../../data/lang.json";
+
+const currentLang = "ru";
+
+const socialLinks = [
+  { href: "https://github.com/adamlean", icon: "fab fa-github" },
+  { href: "https://t.me/dg404_bot", icon: "fa-brands fa-telegram" },
+  { href: "https://www.behance.net/adamlean92", icon: "fab fa-behance" },
+  {
+    href: "https://soundcloud.com/mastamonk36",
+    icon: "fa-brands fa-soundcloud",
+  },
+];
+---
+
+<Layout title="Projects | Адам Лин">
+  <Header menu={lang[currentLang].menu} />
+
+  <main class="content">
+    <Works />
+  </main>
+
+  <Footer socialLinks={socialLinks} author="Адам Лин" />
+</Layout>
