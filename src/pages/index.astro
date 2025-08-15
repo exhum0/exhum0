@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import About from "../components/About.astro";
 import Skills from "../components/Skills.astro";
 import lang from "../data/lang.json";
+import { aboutData, skillsData } from "../data/content";
 
 const currentLang = "ru";
 
@@ -21,8 +22,7 @@ const socialLinks = [
 
 <Layout title="Главная | Адам Лин">
   <Header menu={lang[currentLang].menu} />
-  <About {...About} />
-  <Skills {...Skills} />
-
+  <About {...aboutData} />
+  <Skills {...skillsData} />
   <Footer socialLinks={socialLinks} author="Адам Лин" />
 </Layout>

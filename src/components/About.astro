@@ -1,6 +1,20 @@
 ---
+interface ContactLink {
+  href: string;
+  text: string;
+}
+
+interface Props {
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  subtitle: string;
+  paragraphs: string[];
+  contactLink: ContactLink;
+}
+
 const { imageSrc, imageAlt, title, subtitle, paragraphs, contactLink } =
-  Astro.props;
+  Astro.props as Props;
 ---
 
 <section class="about" id="about">

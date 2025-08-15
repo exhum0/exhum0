@@ -1,5 +1,17 @@
 ---
-const { title, skills } = Astro.props;
+interface Skill {
+  name: string;
+  icon: string;
+  text?: string;
+  external?: boolean;
+}
+
+interface Props {
+  title: string;
+  skills: Skill[];
+}
+
+const { title, skills } = Astro.props as Props;
 ---
 
 <section class="skills-section" id="skills">
