@@ -44,28 +44,77 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Находим контейнер с карточками
-    const portfolioContainer = document.querySelector(".work-container");
-    const linkWork = document.querySelectorAll(".work-item");
+// /assets/js/portfolio-filters.js
+(function () {
+  function init() {
+    const container = document.querySelector(".work-container");
+    if (!container) {
+      console.warn("Контейнер .work-container не найден");
+      return;
+    }
 
-    // Инициализация MixItUp
-    if (portfolioContainer && typeof mixitup !== "undefined") {
-        mixitup(portfolioContainer, {
-            selectors: { target: ".work-card" },
-            animation: { duration: 300 }
-        });
+    if (typeof window.mixitup !== "function") {
+      console.warn("MixItUp не найден (проверьте подключение скрипта CDN)");
+      return;
+    }
+
+    // Инициализируем MixItUp
+    const mixer = window.mixitup(container, {
+      selectors: { target: ".work-card" },
+      animation: { duration: 300 }
+    });
+
+    // Делегирование кликов по фильтрам
+    const filtersBar = document.querySelector(".work-filters");
+    if (!filtersBar) return;
+
+    filtersBar.addEventListener("click", (e) => {
+      const btn = e.target.closest(".work-item");
+      if (!btn) return;
+
+      const selector = btn.getAttribute("data-filter") || "all";
+
+      // Применяем фильтр
+      mixer.filter(selector === "all" ? "all" : selector);
+
+      // Переключаем активное состояние кнопок
+      filtersBar.querySelectorAll(".work-item").forEach((el) => {
+        el.classList.toggle("active-work", el === btn);
+      });
+    });
+  }
+
+  // Ждем DOM и (на всякий) сам MixItUp
+  function ready(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn, { once: true });
     } else {
-        console.warn("MixItUp не найден или .work-container отсутствует");
+      fn();
     }
+  }
 
-    // Переключение активной кнопки
-    if (linkWork.length) {
-        linkWork.forEach((link) => {
-            link.addEventListener("click", function () {
-                linkWork.forEach((l) => l.classList.remove("active-work"));
-                this.classList.add("active-work");
-            });
-        });
+  ready(() => {
+    if (typeof window.mixitup === "function") {
+      init();
+    } else {
+      // Если CDN подгружается позднее — дождёмся
+      const scriptEl = document.querySelector('script[src*="mixitup"]');
+      if (scriptEl) {
+        scriptEl.addEventListener("load", init, { once: true });
+      } else {
+        // Фолбэк-проверка несколько раз
+        let tries = 0;
+        const id = setInterval(() => {
+          tries++;
+          if (typeof window.mixitup === "function") {
+            clearInterval(id);
+            init();
+          } else if (tries > 40) {
+            clearInterval(id);
+            console.warn("MixItUp так и не загрузился");
+          }
+        }, 50);
+      }
     }
-});
+  });
+})();
