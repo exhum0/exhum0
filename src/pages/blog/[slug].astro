@@ -37,9 +37,7 @@ const { Content } = await post.render();
 
   <main class="content container">
     <h1>{post.data.title}</h1>
-    <p class="post-meta">
-      <span>{post.data.author}</span> — <span>{post.data.date}</span>
-    </p>
+
     {post.data.image && <img src={post.data.image} alt={post.data.title} />}
     <article>
       <Content />
