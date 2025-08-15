@@ -533,10 +533,6 @@ input, textarea {
   text-decoration: none;
 }
 
-.section-title:hover {
-  color: blue;
-}
-
 .posts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -579,6 +575,9 @@ input, textarea {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 12px;
+}
+
+.post-title a {
   text-decoration: none;
 }
 
