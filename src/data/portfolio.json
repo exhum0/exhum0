@@ -1,0 +1,42 @@
+{
+  "ru": [
+    {
+      "category": "web",
+      "image": "../assets/img/webgithub.png",
+      "title": "Верстка",
+      "detailsTitle": "Коллекция работ по верстке",
+      "detailsDescription": "Классическая верстка с использованием различных библиотек.",
+      "stack": "html css js",
+      "demo": "https://github.com/adamlean/web-portfolio"
+    },
+    {
+      "category": "web",
+      "image": "https://i.postimg.cc/43Th5VXJ/work-1.png",
+      "title": "Поставщик дальнего востока",
+      "detailsTitle": "Поставщик дальнего востока",
+      "detailsDescription": "Лендинг, реализованный с помощью чистой верстки. Соблюдены все правила BEM, а также присутствует адаптивность",
+      "stack": "html css",
+      "demo": "https://pdv-page.netlify.app/"
+    }
+  ],
+  "en": [
+    {
+      "category": "web",
+      "image": "../assets/img/webgithub.png",
+      "title": "Layout",
+      "detailsTitle": "Collection of layout works",
+      "detailsDescription": "Classic layout using various libraries.",
+      "stack": "html css js",
+      "demo": "https://github.com/adamlean/web-portfolio"
+    },
+    {
+      "category": "web",
+      "image": "https://i.postimg.cc/43Th5VXJ/work-1.png",
+      "title": "Far East Supplier",
+      "detailsTitle": "Far East Supplier",
+      "detailsDescription": "Landing page implemented with pure HTML/CSS. BEM rules followed, responsive design included.",
+      "stack": "html css",
+      "demo": "https://pdv-page.netlify.app/"
+    }
+  ]
+}
