@@ -1,6 +1,10 @@
 ---
-import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import langData from "../../data/lang.json";
 import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
 interface Params {
   lang: "ru" | "en";
@@ -18,7 +22,7 @@ export async function getStaticPaths() {
   );
 
   return posts.map((post) => {
-    const [lang, slug] = post.slug.split("/"); // "en/first" -> ["en","first"]
+    const [lang, slug] = post.slug.split("/");
     return {
       params: { lang: lang as Params["lang"], slug },
       props: { post },
@@ -29,21 +33,39 @@ export async function getStaticPaths() {
 const { post } = Astro.props as Props;
 const { lang } = Astro.params as Params;
 
-// Получаем React/Preact-компонент для содержимого MD/MDX
-const { Content, headings } = await post.render();
+// React/Preact-компонент для содержимого MD/MDX
+const { Content } = await post.render();
+
+const socialLinks = [
+  { href: "https://github.com/adamlean", icon: "fab fa-github" },
+  { href: "https://t.me/dg404_bot", icon: "fa-brands fa-telegram" },
+  { href: "https://www.behance.net/adamlean92", icon: "fab fa-behance" },
+  {
+    href: "https://soundcloud.com/mastamonk36",
+    icon: "fa-brands fa-soundcloud",
+  },
+];
 ---
 
-<article>
-  <h1>{post.data.title}</h1>
-  <p>
-    <em>
-      {
-        post.data.date instanceof Date
-          ? post.data.date.toLocaleDateString(lang)
-          : post.data.date
-      }
-    </em>
-  </p>
+<Layout title={`${post.data.title} | Adam Lean`}>
+  <Header menu={langData[lang].menu} />
 
-  <Content />
-</article>
+  <main class="content">
+    <article>
+      <h1>{post.data.title}</h1>
+      <p>
+        <em>
+          {
+            post.data.date instanceof Date
+              ? post.data.date.toLocaleDateString(lang)
+              : post.data.date
+          }
+        </em>
+      </p>
+
+      <Content />
+    </article>
+  </main>
+
+  <Footer socialLinks={socialLinks} author="Adam Lean" />
+</Layout>
