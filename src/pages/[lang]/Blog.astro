@@ -5,29 +5,37 @@ import Footer from "../../components/Footer.astro";
 import rawLang from "../../data/lang.json";
 import { getCollection, type CollectionEntry } from "astro:content";
 
-// 1) Типизируем lang.json
+// Типизация JSON (без any и без ошибок свойств)
 type LangKey = "ru" | "en";
 type MenuItem = { href: string; text: string; external?: boolean };
-type LangPack = { menu: MenuItem[] } & Record<string, unknown>;
+type LangPack = { menu: MenuItem[]; labels?: { blog?: string } };
 const lang = rawLang as Record<LangKey, LangPack>;
 
-// 2) Безопасно получаем язык (дефолт — "ru")
-const currentLang: LangKey = (Astro.params.lang as LangKey) ?? "ru";
+// Язык из маршрута + фолбэк
+const currentLang = (Astro.params.lang as LangKey) ?? "ru";
 
-// 3) Достаём меню для языка с фолбэком
-const menu: MenuItem[] = lang[currentLang]?.menu ?? [];
+// Меню и заголовок страницы
+const menu = lang[currentLang]?.menu ?? [];
+const blogTitle =
+  lang[currentLang]?.labels?.blog ?? (currentLang === "ru" ? "Блог" : "Blog");
 
-// 4) Получаем посты строго типизированным массивом
+// Посты нужного языка, строго типизированные и отсортированные по дате (новые сверху)
 const posts: CollectionEntry<"blog">[] = (
   await getCollection("blog", ({ data }) => data.lang === currentLang)
 ).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
 
-// 5) Заголовок страницы — из меню или фолбэк
-const blogTitle =
-  menu.find((item) => item.href.includes("/blog"))?.text ||
-  (currentLang === "ru" ? "Блог" : "Blog");
+// Соцссылки (как на главной)
+const socialLinks = [
+  { href: "https://github.com/adamlean", icon: "fab fa-github" },
+  { href: "https://t.me/dg404_bot", icon: "fa-brands fa-telegram" },
+  { href: "https://www.behance.net/adamlean92", icon: "fab fa-behance" },
+  {
+    href: "https://soundcloud.com/mastamonk36",
+    icon: "fa-brands fa-soundcloud",
+  },
+];
 ---
 
 <Layout title={blogTitle}>
@@ -63,16 +71,5 @@ const blogTitle =
     </section>
   </main>
 
-  <Footer
-    socialLinks={[
-      { href: "https://github.com/adamlean", icon: "fab fa-github" },
-      { href: "https://t.me/dg404_bot", icon: "fa-brands fa-telegram" },
-      { href: "https://www.behance.net/adamlean92", icon: "fab fa-behance" },
-      {
-        href: "https://soundcloud.com/mastamonk36",
-        icon: "fa-brands fa-soundcloud",
-      },
-    ]}
-    author="Адам Лин"
-  />
+  <Footer socialLinks={socialLinks} author="Адам Лин" />
 </Layout>

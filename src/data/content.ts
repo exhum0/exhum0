@@ -21,3 +21,4 @@ export const skillsData = {
     { name: "JavaScript", icon: "/icons/js.svg" },
   ],
 };
+

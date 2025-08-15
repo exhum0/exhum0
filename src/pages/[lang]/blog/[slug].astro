@@ -1,0 +1,63 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import rawLang from "../../../data/lang.json";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+type LangKey = "ru" | "en";
+type MenuItem = { href: string; text: string; external?: boolean };
+type LangPack = { menu: MenuItem[]; labels?: { blog?: string } };
+const lang = rawLang as Record<LangKey, LangPack>;
+
+const { lang: langParam, slug } = Astro.params as {
+  lang: LangKey;
+  slug: string;
+};
+const currentLang: LangKey = langParam ?? "ru";
+
+const menu = lang[currentLang]?.menu ?? [];
+
+// Находим пост нужного языка и с нужным slug
+const posts: CollectionEntry<"blog">[] = await getCollection(
+  "blog",
+  ({ data }) => data.lang === currentLang
+);
+const post = posts.find((p) => p.slug === slug);
+if (!post) {
+  throw new Error(`Пост "${slug}" не найден для языка ${currentLang}`);
+}
+
+const { Content } = await post.render();
+const pageTitle = post.data.title;
+const socialLinks = [
+  { href: "https://github.com/adamlean", icon: "fab fa-github" },
+  { href: "https://t.me/dg404_bot", icon: "fa-brands fa-telegram" },
+  { href: "https://www.behance.net/adamlean92", icon: "fab fa-behance" },
+  {
+    href: "https://soundcloud.com/mastamonk36",
+    icon: "fa-brands fa-soundcloud",
+  },
+];
+---
+
+<Layout title={pageTitle}>
+  <Header menu={menu} />
+
+  <main class="content container">
+    <h1>{post.data.title}</h1>
+    <p class="post-meta">
+      <time datetime={post.data.date}>{post.data.date}</time>
+    </p>
+    {
+      post.data.image && (
+        <img src={post.data.image} alt={post.data.title} class="post-cover" />
+      )
+    }
+    <article class="prose">
+      <Content />
+    </article>
+  </main>
+
+  <Footer socialLinks={socialLinks} author="Адам Лин" />
+</Layout>
