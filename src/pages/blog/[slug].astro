@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import lang from "../data/lang.json";
+import { getCollection } from "astro:content";
+
+const currentLang = "ru"; // или "eng"
+const socialLinks = [
+  { href: "https://github.com/adamlean", icon: "fab fa-github" },
+  { href: "https://t.me/dg404_bot", icon: "fa-brands fa-telegram" },
+  { href: "https://www.behance.net/adamlean92", icon: "fab fa-behance" },
+  {
+    href: "https://soundcloud.com/mastamonk36",
+    icon: "fa-brands fa-soundcloud",
+  },
+];
+
+const { slug } = Astro.params;
+
+// Получаем посты только нужного языка
+const posts = await getCollection(
+  "blog",
+  ({ data }) => data.lang === currentLang
+);
+
+const post = posts.find((p) => p.slug === slug);
+if (!post) {
+  throw new Error(`Пост "${slug}" не найден`);
+}
+
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title}>
+  <Header menu={lang[currentLang].menu} />
+
+  <main class="content container">
+    <h1>{post.data.title}</h1>
+    <p class="post-meta">
+      <span>{post.data.author}</span> — <span>{post.data.date}</span>
+    </p>
+    {post.data.image && <img src={post.data.image} alt={post.data.title} />}
+    <article>
+      <Content />
+    </article>
+  </main>
+
+  <Footer socialLinks={socialLinks} author="Адам Лин" />
+</Layout>
