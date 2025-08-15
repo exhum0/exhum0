@@ -21,31 +21,21 @@ const works = lang === "ru" ? workru : worken;
   <div class="work-container container grid">
     {
       works.map((work) => (
-        <div class={`work-card mix ${work.category.toLowerCase()}`}>
+        <div
+          class={`work-card mix ${work.category.toLowerCase()}`}
+          data-img={work.img}
+          data-subtitle={work.category}
+          data-title={work.detailsTitle}
+          data-desc={work.description}
+          data-stack={work.stack}
+          data-demo={work.demo}
+        >
           <img src={work.img} alt={work.title} class="work-img" />
           <h3 class="work-title">{work.title}</h3>
           <span class="work-button">
             {lang === "ru" ? "Посмотреть" : "View"}
             <i class="uil uil-arrow-right work-button-icon" />
           </span>
-
-          <div class="portfolio-item-details" style="display:none;">
-            <h3 class="details-title">{work.detailsTitle}</h3>
-            <p class="details-description">{work.description}</p>
-            <ul class="details-info">
-              <li>
-                {lang === "ru" ? "Стек" : "Stack"} - <span>{work.stack}</span>
-              </li>
-              <li>
-                {lang === "ru" ? "Демо" : "Demo"} -
-                <span>
-                  <a href={work.demo} target="_blank">
-                    {work.demo}
-                  </a>
-                </span>
-              </li>
-            </ul>
-          </div>
         </div>
       ))
     }
@@ -62,7 +52,20 @@ const works = lang === "ru" ? workru : worken;
       </div>
 
       <div class="portfolio-popup-info">
-        <!-- Содержимое заполняется из .portfolio-item-details -->
+        <div class="portfolio-popup-subtitle">
+          <span></span>
+        </div>
+        <div class="portfolio-popup-body">
+          <h3 class="details-title"></h3>
+          <p class="details-description"></p>
+          <ul class="details-info">
+            <li>{lang === "ru" ? "Стек" : "Stack"} - <span></span></li>
+            <li>
+              {lang === "ru" ? "Демо" : "Demo"} - <span
+                ><a href="" target="_blank"></a></span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -72,7 +75,73 @@ const works = lang === "ru" ? workru : worken;
 <script
   src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
 ></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-></script>
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const portfolioContainer = document.querySelector(".work-container");
+    const filtersBar = document.querySelector(".work-filters");
+    const popup = document.querySelector(".portfolio-popup");
 
-<script src="/assets/js/main.js" is:inline></script>
+    // MixItUp
+    let mixer = null;
+    if (typeof window.mixitup === "function") {
+      mixer = window.mixitup(portfolioContainer, {
+        selectors: { target: ".work-card" },
+        animation: { duration: 300 },
+      });
+    }
+
+    // Фильтры
+    if (filtersBar) {
+      filtersBar.addEventListener("click", (e) => {
+        const btn = e.target.closest(".work-item");
+        if (!btn) return;
+        const selector = btn.getAttribute("data-filter") || "all";
+        if (mixer) mixer.filter(selector === "all" ? "all" : selector);
+        filtersBar.querySelectorAll(".work-item").forEach((el) => {
+          el.classList.toggle("active-work", el === btn);
+        });
+      });
+    }
+
+    // Popup
+    if (popup) {
+      const popupClose = popup.querySelector(".portfolio-popup-close");
+      const popupImg = popup.querySelector(".portfolio-popup-img");
+      const popupSubtitle = popup.querySelector(
+        ".portfolio-popup-subtitle span"
+      );
+      const popupTitle = popup.querySelector(".details-title");
+      const popupDesc = popup.querySelector(".details-description");
+      const popupStack = popup.querySelector(
+        ".details-info li:nth-child(1) span"
+      );
+      const popupDemoLink = popup.querySelector(
+        ".details-info li:nth-child(2) span a"
+      );
+
+      portfolioContainer.addEventListener("click", (e) => {
+        const btn = e.target.closest(".work-button");
+        if (!btn) return;
+        const card = btn.closest(".work-card");
+        if (!card) return;
+
+        popupImg.src = card.dataset.img;
+        popupSubtitle.textContent = card.dataset.subtitle;
+        popupTitle.textContent = card.dataset.title;
+        popupDesc.textContent = card.dataset.desc;
+        popupStack.textContent = card.dataset.stack;
+        popupDemoLink.href = card.dataset.demo;
+        popupDemoLink.textContent = card.dataset.demo;
+
+        popup.classList.add("open");
+      });
+
+      popupClose.addEventListener("click", () =>
+        popup.classList.remove("open")
+      );
+      popup.addEventListener("click", (e) => {
+        if (e.target === popup) popup.classList.remove("open");
+      });
+    }
+  });
+</script>
