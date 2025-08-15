@@ -44,23 +44,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//Mix it up Sorting
+document.addEventListener("DOMContentLoaded", () => {
+    // Находим контейнер с карточками
+    const portfolioContainer = document.querySelector(".work-container");
+    const linkWork = document.querySelectorAll(".work-item");
 
-let mixerPortfolio = mixitup('.work-container', {
-    selectors: {
-        target: '.work-card'
-    },
-    animation: {
-        duration: 300
+    // Инициализация MixItUp
+    if (portfolioContainer && typeof mixitup !== "undefined") {
+        mixitup(portfolioContainer, {
+            selectors: { target: ".work-card" },
+            animation: { duration: 300 }
+        });
+    } else {
+        console.warn("MixItUp не найден или .work-container отсутствует");
+    }
+
+    // Переключение активной кнопки
+    if (linkWork.length) {
+        linkWork.forEach((link) => {
+            link.addEventListener("click", function () {
+                linkWork.forEach((l) => l.classList.remove("active-work"));
+                this.classList.add("active-work");
+            });
+        });
     }
 });
-
-// Active link changing
-
-const linkWork = document.querySelectorAll('.work-item');
-
-function activeWork() {
-    linkWork.forEach(l => l.classList.remove('active-work'))
-    this.classList.add('active-work')
-}
-linkWork.forEach(l => l.addEventListener('click', activeWork));
