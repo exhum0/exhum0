@@ -544,7 +544,7 @@ input, textarea {
   border: 1px solid #eee;
   border-radius: 10px;
   overflow: hidden;
-  background: rgb(117, 115, 115);
+  background: rgb(214, 201, 201);
   transition: box-shadow 0.2s ease;
 }
 
