@@ -18,27 +18,30 @@ const works = lang === "ru" ? workru : worken;
     <span class="work-item" data-filter=".python">Python</span>
   </div>
 
-  <div class="work-container container grid">
-    {
-      works.map((work) => (
-        <div
-          class={`work-card mix ${work.category.toLowerCase()}`}
-          data-img={work.img}
-          data-subtitle={work.category}
-          data-title={work.detailsTitle}
-          data-desc={work.description}
-          data-stack={work.stack}
-          data-demo={work.demo}
-        >
-          <img src={work.img} alt={work.title} class="work-img" />
-          <h3 class="work-title">{work.title}</h3>
-          <span class="work-button">
-            {lang === "ru" ? "Посмотреть" : "View"}
-            <i class="uil uil-arrow-right work-button-icon" />
-          </span>
-        </div>
-      ))
-    }
+  <div class="work-container container">
+    <div class="row g-4">
+      {/* Bootstrap row + отступы */}
+      {
+        works.map((work) => (
+          <div
+            class={`col-12 col-sm-6 col-lg-4 work-card mix ${work.category.toLowerCase()}`}
+            data-img={work.img}
+            data-subtitle={work.category}
+            data-title={work.detailsTitle}
+            data-desc={work.description}
+            data-stack={work.stack}
+            data-demo={work.demo}
+          >
+            <img src={work.img} alt={work.title} class="work-img" />
+            <h3 class="work-title">{work.title}</h3>
+            <span class="work-button">
+              {lang === "ru" ? "Посмотреть" : "View"}
+              <i class="uil uil-arrow-right work-button-icon" />
+            </span>
+          </div>
+        ))
+      }
+    </div>
   </div>
 </section>
 
@@ -62,7 +65,8 @@ const works = lang === "ru" ? workru : worken;
             <li>{lang === "ru" ? "Стек" : "Stack"} - <span></span></li>
             <li>
               {lang === "ru" ? "Демо" : "Demo"} - <span
-                ><a href="" target="_blank"></a></span>
+                ><a href="" target="_blank"></a></span
+              >
             </li>
           </ul>
         </div>
