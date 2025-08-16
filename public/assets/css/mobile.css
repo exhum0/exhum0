@@ -1,8 +1,11 @@
 /* Blog */
 
 @media (max-width: 768px) {
-  .faq-grid {
+  .about {
+    display: grid;
+    justify-content: center;
     grid-template-columns: 1fr;
+    gap: 25px;
   }
    .posts-grid {
     grid-template-columns: repeat(2, 1fr);
