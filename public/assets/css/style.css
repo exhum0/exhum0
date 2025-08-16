@@ -267,6 +267,7 @@ input, textarea {
   font-weight: bold;
   margin-bottom: 20px;
   text-decoration: none;
+  padding: 30px 20px;
 }
 
 .posts-grid {
@@ -342,7 +343,7 @@ input, textarea {
 }
 
 .article-title h1 {
-  font-size: 18px;
+  font-size: 32px;
 }
 
 .article-disc {
@@ -351,8 +352,10 @@ input, textarea {
 }
 
 .article-disc p {
-  font-size: 16px
+  font-size: 28px
 }
+
+/* Portfolio */
 
 .row.g-custom {
   --bs-gutter-x: 20px; 
