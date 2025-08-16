@@ -12,11 +12,4 @@
     max-width: 300px;
     padding: 10px 5px;
   }
-  .posts-grid {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(1, 500px);
-    gap: 5px;
-    margin-top: 10px;
-  }
 }

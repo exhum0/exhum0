@@ -30,38 +30,44 @@ const posts = await getCollection("blog", ({ slug }) =>
       <div class="container">
         {
           posts.length > 0 ? (
-            <div class="posts-grid">
+            <div class="row g-4">
               {posts.map((post) => {
-                const [lang, slug] = post.slug.split("/"); // например "en/first"
+                const [lang, slug] = post.slug.split("/");
                 return (
-                  <article class="post-card">
-                    {post.data.image && (
-                      <a href={`/${lang}/${slug}`}>
-                        <img
-                          src={post.data.image}
-                          alt={post.data.title}
-                          class="post-image"
-                        />
-                      </a>
-                    )}
-
-                    <div class="post-content">
-                      {post.data.tag && (
-                        <span class="post-tag">{post.data.tag}</span>
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    {" "}
+                    {/* <-- адаптивные колонки */}
+                    <article class="post-card">
+                      {post.data.image && (
+                        <a href={`/${lang}/${slug}`}>
+                          <img
+                            src={post.data.image}
+                            alt={post.data.title}
+                            class="post-image"
+                          />
+                        </a>
                       )}
-                      <h2 class="post-title">
-                        <a href={`/${lang}/${slug}`}>{post.data.title}</a>
-                      </h2>
-                      {post.data.description && <p>{post.data.description}</p>}
-                      <div class="post-meta">
-                        <span>
-                          {post.data.date instanceof Date
-                            ? post.data.date.toLocaleDateString(lang)
-                            : post.data.date}
-                        </span>
+
+                      <div class="post-content">
+                        {post.data.tag && (
+                          <span class="post-tag">{post.data.tag}</span>
+                        )}
+                        <h2 class="post-title">
+                          <a href={`/${lang}/${slug}`}>{post.data.title}</a>
+                        </h2>
+                        {post.data.description && (
+                          <p>{post.data.description}</p>
+                        )}
+                        <div class="post-meta">
+                          <span>
+                            {post.data.date instanceof Date
+                              ? post.data.date.toLocaleDateString(lang)
+                              : post.data.date}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </article>
+                    </article>
+                  </div>
                 );
               })}
             </div>
