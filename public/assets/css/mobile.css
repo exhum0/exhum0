@@ -1,6 +1,6 @@
 /* Blog */
 
-@media (max-width: 768px) {
+@media (max-width: 650px) {
   .about {
     display: flex;
     flex-direction: column;
@@ -12,14 +12,30 @@
     max-width: 300px;
     padding: 10px 5px;
   }
-   .posts-grid {
+  .posts-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
   }
-  .post-card {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px 5px;
+   .posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-image {
+    height: 150px; /* немного ниже, чтобы лучше смотрелось */
+  }
+
+  .post-title {
+    font-size: 14px;
+  }
+
+  .post-meta {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
