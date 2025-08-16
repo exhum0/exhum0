@@ -14,28 +14,10 @@
   }
   .posts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
     gap: 20px;
     width: 100%;
     height: 150px;
     justify-content: center;
-  }
-
-  .post-image {
-    height: 200px;
-  }
-
-  .post-title {
-    font-size: 14px;
-  }
-
-  .post-meta {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .posts-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
