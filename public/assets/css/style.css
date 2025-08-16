@@ -361,12 +361,11 @@ input, textarea {
 }
 
 /* Дата */
-.article-disc p {
+.article-disc {
   font-size: 1rem;
   color: #aaa;
   margin-bottom: 2rem;
   text-align: center;
-  justify-content: center;
 }
 
 /* Подзаголовки внутри контента */
