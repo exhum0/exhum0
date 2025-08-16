@@ -353,16 +353,55 @@ input, textarea {
 
 /* Post */
 
-.article-container {
+/* Общий контейнер */
+.content {
   display: flex;
   justify-content: center;
-  padding: 30px 20px;
+  padding: 2rem 1rem;
+  color: #000000; /* белый текст */
 }
 
+.article-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center; /* центрирование текста */
+}
+
+/* Заголовок статьи */
 .article-title h1 {
-  justify-content: center;
+  font-size: 2.5rem;   /* крупный */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
+/* Дата */
 .article-disc p {
-  justify-content: center;
+  font-size: 1rem;
+  color: #aaa; /* серый для второстепенного текста */
+  margin-bottom: 2rem;
+}
+
+/* Подзаголовки внутри контента */
+.article-container h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+}
+
+/* Абзацы */
+.article-container p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* Ссылки */
+.article-container a {
+  color: #4da6ff;
+  text-decoration: underline;
+}
+
+.article-container a:hover {
+  color: #80c0ff;
 }
