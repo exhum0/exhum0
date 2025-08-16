@@ -350,3 +350,19 @@ input, textarea {
   align-items: center;
   justify-content: center;
 }
+
+/* Post */
+
+.article-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.article-title h1 {
+  justify-content: center;
+}
+
+.article-disc p {
+  justify-content: center;
+}
