@@ -267,7 +267,6 @@ input, textarea {
   font-weight: bold;
   margin-bottom: 20px;
   text-decoration: none;
-  padding: 30px 20px;
 }
 
 .posts-grid {
@@ -334,6 +333,7 @@ input, textarea {
   margin-top: 25px;
   display: flex;
   justify-content: center;
+  padding: 30px 20px;
 }
 
 .article-title {
