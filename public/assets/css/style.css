@@ -546,7 +546,8 @@ input, textarea {
   overflow: hidden;
   background: white;
   transition: box-shadow 0.2s ease;
-  border: #000;
+  border-color: #000;
+  border-width: 2px;
 }
 
 .post-card:hover {
