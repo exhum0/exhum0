@@ -343,16 +343,17 @@ input, textarea {
 }
 
 .article-title h1 {
-  font-size: 32px;
+  font-size: 18px;
 }
 
 .article-disc {
   display: flex;
   justify-content: center;
+  font-size: 14px;
 }
 
 .article-disc p {
-  font-size: 28px
+  font-size: 
 }
 
 /* Portfolio */
