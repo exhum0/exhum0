@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 10px 5px;
   }
   .article-title h1 {
     justify-content: center;
