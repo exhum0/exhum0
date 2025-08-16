@@ -108,42 +108,6 @@
   background-color: #c5c5c5;
 }
 
-/* Skills */
-
-.skill {margin-top: 50px;}
-
-.skills-title { margin-bottom: 10px; display: flex; justify-content: center; }
-
-.skills-list { padding: 20px; }
-
-.skills-item:not(:last-child) {margin-bottom: 15px; }
-
-.skill .title-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 8px;
-}
-
-    .skill .title-wrapper data {
-        color: var(--light-gray);
-        font-size: var(--fs7);
-        font-weight: var(--fw300);
-    }
-
-.skills-progress-bg {
-    background: var(--jet);
-    width: 100%;
-    height: 8px;
-    border-radius: 10px;
-}
-
-.skills-progress-fill {
-    background: var(--text-gradient-yellow);
-    height: 100%;
-    border-radius: inherit;
-}
-
 /* Subscribe */
 
 .subscribe-section {
