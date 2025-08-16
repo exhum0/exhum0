@@ -546,10 +546,11 @@ input, textarea {
   overflow: hidden;
   background: white;
   transition: box-shadow 0.2s ease;
+  border: #000;
 }
 
 .post-card:hover {
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(3, 106, 224, 0.1);
 }
 
 .post-image {
