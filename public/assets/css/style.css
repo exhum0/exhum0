@@ -349,3 +349,11 @@ input, textarea {
 .article-disc p {
   font-size: 16px
 }
+
+.row.g-custom {
+  --bs-gutter-x: 20px; 
+  --bs-gutter-y: 20px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}

@@ -19,12 +19,12 @@ const works = lang === "ru" ? workru : worken;
   </div>
 
   <div class="work-container container">
-    <div class="row g-4">
+    <div class="row g-custom">
       {/* Bootstrap row + отступы */}
       {
         works.map((work) => (
           <div
-            class={`col-12 col-sm-6 col-lg-4 work-card mix ${work.category.toLowerCase()}`}
+            class={`col-10 col-sm-4 col-lg-3 work-card mix ${work.category.toLowerCase()}`}
             data-img={work.img}
             data-subtitle={work.category}
             data-title={work.detailsTitle}
