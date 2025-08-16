@@ -17,4 +17,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+  .post-card {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 5px;
+  }
 }
