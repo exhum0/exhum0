@@ -3,7 +3,7 @@ title: "Я работаю оператором колл центра - все п
 date: 2025-06-16
 description: "Я работал на той работе, которую ненавидел. Уволился и ушел работать оператором"
 tag: "Работа"
-image: "/assets/blog/callcenterpost.jpg"
+image: "/assets/img/blog/callcenterpost.jpg"
 ---
 
 ## Вступление
