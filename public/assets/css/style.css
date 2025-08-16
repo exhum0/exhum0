@@ -259,7 +259,7 @@ input, textarea {
 /* Blog */
 
 .blog {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .section-title {
@@ -286,7 +286,7 @@ input, textarea {
 
 .post-image {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
 }
 
