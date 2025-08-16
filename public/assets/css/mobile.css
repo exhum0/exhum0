@@ -12,4 +12,16 @@
     max-width: 300px;
     padding: 10px 5px;
   }
+  .article-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .article-title h1 {
+    justify-content: center;
+  }
+
+  .article-disc {
+    justify-content: center;
+  }
 }
