@@ -1,6 +1,6 @@
 /* Blog */
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   .about {
     display: flex;
     flex-direction: column;
@@ -14,7 +14,8 @@
   }
   .posts-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    grid-template-columns: repeat(1, 500px);
     gap: 5px;
     margin-top: 10px;
   }
