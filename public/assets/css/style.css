@@ -2,11 +2,18 @@
 @import "mobile.css";
 
 h1 {
-  font-size: 32;
+  font-size: 24px;
 }
 
 p {
-  font-size: 24px;
+  font-size: 18px;
+}
+
+.content {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
 }
 
 /* Nav */
@@ -332,25 +339,6 @@ input, textarea {
   gap: 8px;
   font-size: 14px;
   color: #777;
-}
-
-/* Post */
-
-.article-container {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  padding: 30px 20px;
-}
-
-.article-title {
-  display: flex;
-  justify-content: center;
-}
-
-.article-disc {
-  display: flex;
-  justify-content: center;
 }
 
 /* Portfolio */
