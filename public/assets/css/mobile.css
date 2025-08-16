@@ -1,8 +1,7 @@
 /* Blog */
 
 @media (max-width: 650px) {
-  .about,
-  .posts-grid {
+  .about {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,5 +11,11 @@
   .about__image img {
     max-width: 300px;
     padding: 10px 5px;
+  }
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 10px;
   }
 }
