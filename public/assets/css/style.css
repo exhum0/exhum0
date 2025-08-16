@@ -349,7 +349,7 @@ input, textarea {
 .article-container {
   max-width: 1440px;
   width: 100%;
-  text-align: justify; /* центрирование текста */
+  text-align: center; /* центрирование текста */
 }
 
 /* Заголовок статьи */
