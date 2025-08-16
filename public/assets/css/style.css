@@ -619,7 +619,7 @@ input, textarea {
 }
 
 .article-title h1 {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .article-disc {
@@ -628,5 +628,5 @@ input, textarea {
 }
 
 .article-disc p {
-  font-size: 20px
+  font-size: 16px
 }
