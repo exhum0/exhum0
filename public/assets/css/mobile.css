@@ -1,13 +1,10 @@
 /* Blog */
 
-@media (max-width: 900px) {
-  .posts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .posts-grid {
+@media (max-width: 768px) {
+  .faq-grid {
     grid-template-columns: 1fr;
+  }
+   .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
