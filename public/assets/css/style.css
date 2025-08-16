@@ -544,10 +544,8 @@ input, textarea {
   border: 1px solid #eee;
   border-radius: 10px;
   overflow: hidden;
-  background: white;
+  background: rgb(117, 115, 115);
   transition: box-shadow 0.2s ease;
-  border-color: #494545;
-  border-width: 1px;
 }
 
 .post-card:hover {
