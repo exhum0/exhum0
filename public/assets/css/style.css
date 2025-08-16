@@ -361,7 +361,7 @@ input, textarea {
 }
 
 /* Дата */
-.article-disc {
+.article-disc p {
   font-size: 1rem;
   color: #aaa;
   margin-bottom: 2rem;
