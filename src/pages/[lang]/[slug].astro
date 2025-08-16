@@ -53,16 +53,20 @@ const socialLinks = [
   <main class="content">
     <div class="article-container">
       <article>
-        <h1 class="article-title">{post.data.title}</h1>
-        <p class="article-disc">
-          <em>
-            {
-              post.data.date instanceof Date
-                ? post.data.date.toLocaleDateString(lang)
-                : post.data.date
-            }
-          </em>
-        </p>
+        <div class="article-title">
+          <h1>{post.data.title}</h1>
+        </div>
+        <div class="article-disc">
+          <p>
+            <em>
+              {
+                post.data.date instanceof Date
+                  ? post.data.date.toLocaleDateString(lang)
+                  : post.data.date
+              }
+            </em>
+          </p>
+        </div>
 
         <Content />
       </article>
