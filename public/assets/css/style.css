@@ -366,6 +366,7 @@ input, textarea {
   color: #aaa;
   margin-bottom: 2rem;
   text-align: center;
+  justify-content: center;
 }
 
 /* Подзаголовки внутри контента */
